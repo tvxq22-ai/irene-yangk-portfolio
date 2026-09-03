@@ -126,10 +126,12 @@ header::before{content:"";position:absolute;left:-100px;bottom:-160px;width:380p
 .media-item .cap{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(15,23,42,.82));color:#fff;font-size:12px;padding:22px 12px 8px}
 .media-strip{display:flex;gap:12px;overflow-x:auto;padding-bottom:8px;margin-top:14px}
 .media-strip img{height:300px;border-radius:12px;border:1px solid var(--line);flex-shrink:0}
-.phone-grid{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:14px}
-.phone-grid .phone{width:180px;border-radius:22px;border:1px solid var(--line);overflow:hidden;box-shadow:var(--shadow);background:#fff}
+.phone-grid{display:flex;gap:16px;margin-top:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;-webkit-overflow-scrolling:touch}
+.phone-grid::-webkit-scrollbar{display:none}
+.phone-grid .phone{width:200px;flex:0 0 auto;scroll-snap-align:center;border-radius:22px;border:1px solid var(--line);overflow:hidden;box-shadow:var(--shadow);background:#fff}
 .phone-grid .phone img{width:100%;height:auto}
 .phone-grid .phone .pn{font-size:12px;color:var(--muted);text-align:center;padding:8px 4px 12px}
+.swipe-tip{font-size:12px;color:var(--muted);text-align:center;margin-top:16px}
 
 /* ===== 视频链接占位区 ===== */
 .vid-block{margin-top:14px;background:var(--bg-soft);border:1px dashed #cbd5e1;border-radius:14px;padding:18px 20px}
@@ -138,7 +140,7 @@ header::before{content:"";position:absolute;left:-100px;bottom:-160px;width:380p
 .vid-block .hint{font-size:12px;color:var(--muted);margin-bottom:12px}
 .vid-links{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .vlink{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:13px;color:var(--ink-soft);transition:.2s;width:100%;min-width:0;text-align:left}
-@media(max-width:720px){.vid-links{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.vid-links{grid-template-columns:1fr}}
 .vlink:hover{border-color:var(--brand);color:var(--brand);transform:translateY(-2px)}
 .vlink .pl{width:34px;height:34px;border-radius:9px;background:var(--brand);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:14px;flex-shrink:0}
 .vlink .vt{font-weight:700;color:var(--ink);display:block;font-size:13px}
@@ -198,7 +200,8 @@ header::before{content:"";position:absolute;left:-100px;bottom:-160px;width:380p
 
 /* ===== 更多项目带图 ===== */
 .more-media{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
-.more-media img{width:100%;height:96px;object-fit:cover;border-radius:8px;border:1px solid var(--line)}
+.more-media img{width:100%;height:96px;object-fit:cover;border-radius:8px;border:1px solid var(--line);cursor:zoom-in;transition:.2s}
+.more-media img:hover{transform:scale(1.02)}
 .award-list{margin-top:12px;display:flex;flex-direction:column;gap:8px}
 .award{display:flex;gap:10px;align-items:flex-start;background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;padding:8px 12px;font-size:13px;color:var(--ink-soft)}
 .award .t{color:var(--brand-deep);font-weight:700;flex-shrink:0}
@@ -297,7 +300,7 @@ header::before{content:"";position:absolute;left:-100px;bottom:-160px;width:380p
 /* ===== 更多项目 ===== */
 #more{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .more-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-.more-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 28px;transition:.25s}
+.more-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 28px;transition:.25s;min-width:0}
 .more-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .more-card h4{font-size:18px;font-weight:700}
 .more-card .role{color:var(--brand);font-size:13px;font-weight:600;margin-top:4px}
@@ -327,6 +330,11 @@ footer{background:var(--ink);color:#cbd5e1;padding:72px 0 40px}
 .crow a:hover{color:var(--brand)}
 .qr-place{border:1px dashed rgba(255,255,255,.25);border-radius:14px;padding:24px;text-align:center;color:#94a3b8;font-size:13px;margin-top:20px;background:rgba(255,255,255,.03)}
 .copyright{text-align:center;color:#64748b;font-size:13px;margin-top:56px;border-top:1px solid rgba(255,255,255,.08);padding-top:28px}
+
+/* ===== 上汽系案例分组 ===== */
+.case-group{border:2px solid rgba(249,115,22,.28);border-radius:22px;padding:22px 22px 8px;margin-top:12px}
+.case-group-title{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:800;letter-spacing:.1em;color:var(--brand);text-transform:uppercase;margin-bottom:6px}
+.case-group-title::after{content:"";flex:1;height:1px;background:var(--line)}
 
 /* ===== 响应式 ===== */
 @media(max-width:900px){
@@ -369,17 +377,16 @@ footer{background:var(--ink);color:#cbd5e1;padding:72px 0 40px}
     <div class="hero-brand">
       <div class="hb-avatar"><img src="assets/img/portrait.jpg" alt="杨轲 Irene"></div>
       <div class="hb-info">
-        <div class="hero-top"><span class="dot"></span> 运营 × 市场 · 双线实战经验</div>
         <h1 class="hero-name">杨轲<span class="en">IRENE</span></h1>
-        <div class="hero-role">内容 × 数据 × AI · 会拍广告片的运营</div>
-        <p class="hero-tagline">从字库账号 0→1 冷启动，到律所私域年创收 150w+、单条视频曝光 300w+——我以「内容 + 数据 + 节点」驱动增长，把 AI 能力融入运营全链路。</p>
+        <div class="hero-role">品牌内容 × 数据驱动 · 运营与营销复合型</div>
+        <p class="hero-tagline">字库账号 0→1 冷启动、律所社群用户运营与客户谈判、营销漏斗转化创收 150w+；品牌广告内容编导制作、单条曝光 300w+、战役话题声量 2.6 亿——既能走量做运营转化，也能走质做创意声量，并以 AI 数据洞察赋能公益营销。</p>
         <div class="hb-lines">
           <div class="hb-line">📍 <b>香港城市大学</b> · 新媒体传播 硕士在读</div>
           <div class="hb-line">🎓 <b>上海大学</b>·艺术与科技 + 上海温哥华电影学院（辅修电影制作）</div>
           <div class="hb-line">💼 汉仪字库 C端内容运营 → <span class="em">小米畅销榜 Top10</span></div>
-          <div class="hb-line">📈 律所私域年创收 <span class="em">150w+</span> / 单条视频曝光 <span class="em">300w+</span></div>
-          <div class="hb-line">🎬 肖战 TVC 执行导演 / 奥迪 A7L 黑武士执行制片</div>
-          <div class="hb-line">🤖 <span class="em">AI 营销赋能</span>：10w+ 文本爬取 + KMeans 画像 + 预测 Demo</div>
+          <div class="hb-line">📈 律所年度创收 <span class="em">150w+</span> / 单条视频曝光 <span class="em">300w+</span></div>
+          <div class="hb-line">🎬 肖战 TVC 执行导演 / 奥迪 A7L 黑武士执行制片 / 燕之屋《传承》创意编导</div>
+          <div class="hb-line">🤖 <span class="em">AI 赋能公益营销</span>：10w+ 文本爬取 + KMeans 画像 + 预测 Demo</div>
         </div>
         <div class="hero-tags">
           <span class="hs">#内容运营</span><span class="hs">#品牌创意</span><span class="hs">#数据洞察</span><span class="hs">#AI赋能</span><span class="hs">#短视频策划</span>
@@ -403,8 +410,9 @@ footer{background:var(--ink);color:#cbd5e1;padding:72px 0 40px}
     <div class="stats-grid">
       <div class="stat"><div class="stat-num">300<i>万+</i></div><div class="stat-label">单条视频全网曝光</div></div>
       <div class="stat"><div class="stat-num">Top<b>10</b></div><div class="stat-label">小米字体畅销榜</div></div>
-      <div class="stat"><div class="stat-num">150<i>w+</i></div><div class="stat-label">私域年创收</div></div>
+      <div class="stat"><div class="stat-num">150<i>w+</i></div><div class="stat-label">年度创收</div></div>
       <div class="stat"><div class="stat-num">10<i>w+</i></div><div class="stat-label">诈骗新闻文本爬取</div></div>
+      <div class="stat"><div class="stat-num">2.6<i>亿+</i></div><div class="stat-label">参与广告战役 · 话题声量</div></div>
     </div>
   </div>
 </section>
@@ -458,7 +466,7 @@ footer{background:var(--ink);color:#cbd5e1;padding:72px 0 40px}
     <div class="sec-head">
       <div class="sec-kicker">Featured Projects</div>
       <h2 class="sec-title">精选案例</h2>
-      <p class="sec-sub">每个案例均按「背景 → 动作 → 成果 → 呈现形式」展开，附一句核心能力标签。</p>
+      <p class="sec-sub">从账号运营、内容编导制作，到品牌战役传播与数据驱动洞察，覆盖内容营销全链路；每个案例按「背景 → 动作 → 成果 → 呈现」展开，并标注核心能力标签。</p>
     </div>
 
     <!-- 案例1 汉仪 -->
@@ -566,7 +574,9 @@ footer{background:var(--ink);color:#cbd5e1;padding:72px 0 40px}
         </div>
       </div>
     </article>
-    <article class="case">
+          <div class="case-group">
+        <div class="case-group-title">上汽系 · 年框短视频内容编导制作（奥迪 / 大众 ID / 斯柯达）</div>
+<article class="case">
       <div class="case-head">
         <span class="case-badge">精选 02 · 市场</span>
         <h3 class="case-title">上汽奥迪 / 上汽大众 · 年框品牌内容创意与制作</h3>
@@ -600,7 +610,7 @@ footer{background:var(--ink);color:#cbd5e1;padding:72px 0 40px}
           <div class="fcard">
             <span class="ftag">呈现 · Evidence</span>
             <ul>
-              <li>年框内多支<strong>已上线 TVC</strong>：肖战《喜欢上海的理由》/ A7L 黑武士 / 虎啸开年 / 燕之屋《传承》/ 大众 ID 中秋 / 斯柯达 · 致敬冰雪赛场 ×3</li>
+              <li>年框内多支<strong>已上线 TVC</strong>：肖战《喜欢上海的理由》/ A7L 黑武士 / 虎啸开年 / 大众 ID 中秋 / 斯柯达 · 致敬冰雪赛场 ×3</li>
               <li>一条能力链贯穿：<strong>创意策划 → 文案共创 → 编导分镜 → 执行导演 → 执行制片 / 场记 → 后期统筹</strong></li>
             </ul>
           </div>
@@ -630,9 +640,146 @@ footer{background:var(--ink);color:#cbd5e1;padding:72px 0 40px}
           </div>
         </div>
 
+        <!-- TVC制作全流程Timeline -->
+        <div class="tl-block">
+          <div class="tl-head">TVC 制作全流程 · 统筹排期（源自《奥迪 A7L 黑武士》执行制片）<span class="meta">现场拍摄流程表 + 前期简易甘特图</span></div>
+          <div class="media-grid" style="grid-template-columns:repeat(2,1fr);padding:16px">
+            <div class="media-item"><img src="assets/img/audi_rundown.png" alt="现场拍摄流程表" onclick="openLightbox('assets/img/audi_rundown.png')"><div class="cap">现场 SHOOTING RUNDOWN · 摄制组到场 / 开机 / 分镜排期（RED 8K）</div></div>
+            <div class="media-item"><img src="assets/img/audi_gantt.png" alt="前期简易甘特图" onclick="openLightbox('assets/img/audi_gantt.png')"><div class="cap">前期简易甘特图 · 创意→分镜→堪景→PPM→预打灯→拍摄→A/B copy→online→成片</div></div>
+          </div>
+        </div>
+
+        <!-- 成片视频（图片卡片） -->
+        <div class="vid-block">
+          <h5>成片视频 · 点击封面即可观看</h5>
+          <div class="hint">年框内代表成片（上汽奥迪 / 上汽大众）；另有大众 ID 中秋、斯柯达·致敬冰雪赛场 ×3 详见紧邻下方案例</div>
+          <div class="vid-cards">
+            <a class="vid-card" href="https://v.douyin.com/O6nLRkY4-mA/" target="_blank" rel="noopener">
+              <img src="assets/img/audi_frame1.jpg" alt="喜欢上海的理由">
+              <div class="vc-play"><span>▶</span></div>
+              <div class="vc-info"><div class="vc-t">《喜欢上海的理由》<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></div><div class="vc-u">肖战 · 城市情怀 TVC · 曝光 300 万+</div></div>
+            </a>
+            <a class="vid-card" href="https://weixin.qq.com/sph/AchPKTDDMc" target="_blank" rel="noopener">
+              <img src="assets/img/audi_frame2.jpg" alt="奥迪A7L黑武士TVC">
+              <div class="vc-play"><span>▶</span></div>
+              <div class="vc-info"><div class="vc-t">奥迪 A7L「黑武士」TVC<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></div><div class="vc-u">执行制片 / 场记</div></div>
+            </a>
+            <a class="vid-card" href="https://weixin.qq.com/sph/AW1iqVTV6B" target="_blank" rel="noopener">
+              <img src="assets/img/audi_frame3.jpg" alt="虎啸开年监制">
+              <div class="vc-play"><span>▶</span></div>
+              <div class="vc-info"><div class="vc-t">虎啸开年 · 监制<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></div><div class="vc-u">监制作品</div></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article><!-- 案例5 大众ID & 斯柯达 -->
+    <article class="case">
+      <div class="case-head">
+        <span class="case-badge">精选 03 · 创意策划</span>
+        <h3 class="case-title">上汽大众 ID.家族 & 斯柯达 · 场景化创意策划</h3>
+        <div class="case-meta"><span><b>角色</b> 创意策划 · 脚本分镜</span><span><b>时间</b> 2022.04 – 2022.07</span><span><b>标签</b> 上汽年框系列短视频创意 × 场景化内容</span></div>
+      </div>
+      <div class="case-body">
+        <div class="four">
+          <div class="fcard">
+            <span class="ftag act">背景 · Challenge</span>
+            <ul>
+              <li>为<strong>上汽大众 ID.家族车机系统</strong>与<strong>斯柯达品牌</strong>策划系列短视频，解决功能点生硬、难传播的问题</li>
+              <li>把「车机 APP 联动 / 远程控车 / 世界杯直播」等功能点，做成<strong>有剧情、有情绪、可传播</strong>的娱乐化内容</li>
+            </ul>
+          </div>
+          <div class="fcard">
+            <span class="ftag">动作 · Action</span>
+            <ul>
+              <li><strong>大众 ID 系列</strong>：产出多版 video option 创意（车机×网易云 / 咪咕 / 小组件），每个功能点对应一个生活化剧情</li>
+              <li><strong>斯柯达</strong>：策划「致敬冰雪赛场」系列短视频，绑定 2022 冬奥节点与赛场情感场景</li>
+              <li>从创意概念、分镜脚本到拍摄执行全流程输出</li>
+            </ul>
+          </div>
+          <div class="fcard">
+            <span class="ftag out">成果 · Result</span>
+            <ul>
+              <li>多支创意方案落地成片，并在<strong class="green">官方视频号发布</strong>（见下方成片链接）</li>
+              <li>把生硬的汽车功能点转化为<strong class="green">有记忆点的剧情化内容</strong>，提升传播力与品牌好感度</li>
+            </ul>
+          </div>
+          <div class="fcard">
+            <span class="ftag">呈现 · Evidence</span>
+            <ul>
+              <li>斯柯达「致敬冰雪赛场」系列成片 ×3（视频号已上线）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="case-media">
+        <!-- 斯柯达 致敬冰雪赛场系列 -->
+        <div class="plan-block">
+          <div class="pb-head">斯柯达 · 致敬冰雪赛场系列<span class="meta">2022 冬奥节点 · 3 支成片已上线视频号</span></div>
+          <div class="pg-text">
+            <ul>
+              <li><strong>致敬冰雪赛场系列</strong>：2022 年 2 月冬奥节点上线，以「心怀梦想 · 为赛场喝彩」为主题，系列 3 支成片（梦在发芽 / 心中有梦 / 不忘初心），把品牌精神与冬奥赛场情感绑定</li>
+              <li>从创意概念、脚本分镜到拍摄执行全流程输出，成片已在官方视频号发布</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 视频链接 -->
+        <div class="vid-block">
+          <h5>成片视频 · 微信视频号</h5>
+          <div class="hint">斯柯达致敬冰雪赛场系列 3 支 + 大众 ID 中秋成片</div>
+          <div class="vid-links">
+            <a class="vlink" href="https://weixin.qq.com/sph/ARxjVjQrOp" target="_blank" rel="noopener"><span class="pl">▶</span><span><span class="vt">大众 ID · 中秋成片<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></span><span class="vu">ID 家族车机系列</span></span></a>
+            <a class="vlink" href="https://weixin.qq.com/sph/ABcqBIYev9" target="_blank" rel="noopener"><span class="pl">▶</span><span><span class="vt">斯柯达 · 致敬冰雪赛场 ①<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></span><span class="vu">「梦在发芽，长成巨树」</span></span></a>
+            <a class="vlink" href="https://weixin.qq.com/sph/AM0glQkbOP" target="_blank" rel="noopener"><span class="pl">▶</span><span><span class="vt">斯柯达 · 致敬冰雪赛场 ②<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></span><span class="vu">「心中有梦，哪里都是赛场」</span></span></a>
+            <a class="vlink" href="https://weixin.qq.com/sph/Au1xDdpb6m" target="_blank" rel="noopener"><span class="pl">▶</span><span><span class="vt">斯柯达 · 致敬冰雪赛场 ③<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></span><span class="vu">「不忘初心，心怀梦想」</span></span></a>
+          </div>
+        </div>
+      </div>
+    </article>      </div>
+    <!-- 案例4 燕之屋 -->
+    <article class="case">
+      <div class="case-head">
+        <span class="case-badge">精选 04 · 品牌 TVC</span>
+        <h3 class="case-title">燕之屋《传承》TVC · 文案共创 × 创意编导全案</h3>
+        <div class="case-meta"><span><b>角色</b> 广告创意 · 文案共创 × 创意编导</span><span><b>时间</b> 2022.05 – 2022.08</span><span><b>标签</b> 燕之屋中秋节点品牌战役 · 内容核心资产</span></div>
+      </div>
+      <div class="case-body">
+        <div class="four">
+          <div class="fcard">
+            <span class="ftag act">背景 · Challenge</span>
+            <ul>
+              <li>燕之屋品牌<strong>中秋节点战役</strong>，需要一支兼具<strong>东方养生调性</strong>与传播力的品牌 TVC，在国潮趋势中强化「高端 · 品质 · 东方美」心智</li>
+            </ul>
+          </div>
+          <div class="fcard">
+            <span class="ftag">动作 · Action</span>
+            <ul>
+              <li><strong>文案共创</strong>：主导产品文案与旁白共创，输出「以匠艺传承为底」品牌主张与落版 Slogan「吃燕窝，就选燕之屋」</li>
+              <li><strong>创意编导</strong>：60s 创意主线（时光回溯 · 金色燕子穿越古今）、8 大场景分镜、影调美术设定与制作排期统筹</li>
+            </ul>
+          </div>
+          <div class="fcard">
+            <span class="ftag out">成果 · Result</span>
+            <ul>
+              <li>成片<strong class="green">已上线</strong>（视频号），被媒体解读为「穿越古今」创意范本</li>
+              <li>上线当日 <strong class="green">#赵丽颖 中秋东方礼# 登上微博热搜</strong>：当日 14 点阅读量 <strong class="green">5415 万</strong>、讨论 <strong class="green">12.5 万</strong></li>
+              <li>战役双话题总阅读量 <strong class="green">超 2.6 亿</strong>、讨论近 23 万，冲上宣发当日自然热搜榜第 21 / 文娱榜第 11</li>
+              <li>该片阅读量 <strong class="green">3442 万</strong>、转发 8 万+（口径：品牌战役整体公开数据）</li>
+            </ul>
+          </div>
+          <div class="fcard">
+            <span class="ftag">呈现 · Evidence</span>
+            <ul>
+              <li>文案节选 / 第三方媒体解读 / PPM / 分镜脚本 / 影调美术 / 制作排期 / 成片视频</li>
+              <li>战役传播数据：燕之屋官网新闻稿 · 数英复盘 · 新浪财经（公开披露，口径为品牌战役整体）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="case-media">
         <!-- 文案能力 -->
         <div class="copy-block">
-          <div class="cp-head">文案共创 × 创意编导 · 燕之屋 30s/60s 品牌 TVC<span class="meta">东方养生调性 · 文案共创 + 创意编导</span></div>
+          <div class="cp-head">文案共创 × 创意编导 · 燕之屋 30s/60s 品牌 TVC<span class="meta">燕之屋中秋节点品牌战役 · 内容核心资产 · 文案共创 + 创意编导</span></div>
           <div class="copy-body">
             <div class="copy-item">
               <div class="ct">开篇 · 意象营造</div>
@@ -694,49 +841,25 @@ footer{background:var(--ink);color:#cbd5e1;padding:72px 0 40px}
           </div>
         </div>
 
-        <!-- TVC制作全流程Timeline -->
-        <div class="tl-block">
-          <div class="tl-head">TVC 制作全流程 · 统筹排期（源自《奥迪 A7L 黑武士》执行制片）<span class="meta">现场拍摄流程表 + 前期简易甘特图</span></div>
-          <div class="media-grid" style="grid-template-columns:repeat(2,1fr);padding:16px">
-            <div class="media-item"><img src="assets/img/audi_rundown.png" alt="现场拍摄流程表" onclick="openLightbox('assets/img/audi_rundown.png')"><div class="cap">现场 SHOOTING RUNDOWN · 摄制组到场 / 开机 / 分镜排期（RED 8K）</div></div>
-            <div class="media-item"><img src="assets/img/audi_gantt.png" alt="前期简易甘特图" onclick="openLightbox('assets/img/audi_gantt.png')"><div class="cap">前期简易甘特图 · 创意→分镜→堪景→PPM→预打灯→拍摄→A/B copy→online→成片</div></div>
-          </div>
-        </div>
-
-        <!-- 成片视频（图片卡片） -->
         <div class="vid-block">
           <h5>成片视频 · 点击封面即可观看</h5>
-          <div class="hint">年框内代表成片（上汽奥迪 / 燕之屋）；另有大众 ID 中秋、斯柯达·致敬冰雪赛场 ×3 见下方精选案例 05</div>
           <div class="vid-cards">
-            <a class="vid-card" href="https://v.douyin.com/O6nLRkY4-mA/" target="_blank" rel="noopener">
-              <img src="assets/img/audi_frame1.jpg" alt="喜欢上海的理由">
-              <div class="vc-play"><span>▶</span></div>
-              <div class="vc-info"><div class="vc-t">《喜欢上海的理由》<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></div><div class="vc-u">肖战 · 城市情怀 TVC · 曝光 300 万+</div></div>
-            </a>
             <a class="vid-card" href="https://weixin.qq.com/sph/AkBfezS0QU" target="_blank" rel="noopener">
               <img src="assets/img/ppm_yz_1.jpg" alt="燕之屋品牌TVC">
               <div class="vc-play"><span>▶</span></div>
               <div class="vc-info"><div class="vc-t">燕之屋品牌 TVC《传承》<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></div><div class="vc-u">文案共创 + 创意编导 · 穿越古今东方滋养</div></div>
-            </a>
-            <a class="vid-card" href="https://weixin.qq.com/sph/AchPKTDDMc" target="_blank" rel="noopener">
-              <img src="assets/img/audi_frame2.jpg" alt="奥迪A7L黑武士TVC">
-              <div class="vc-play"><span>▶</span></div>
-              <div class="vc-info"><div class="vc-t">奥迪 A7L「黑武士」TVC<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></div><div class="vc-u">执行制片 / 场记</div></div>
-            </a>
-            <a class="vid-card" href="https://weixin.qq.com/sph/AW1iqVTV6B" target="_blank" rel="noopener">
-              <img src="assets/img/audi_frame3.jpg" alt="虎啸开年监制">
-              <div class="vc-play"><span>▶</span></div>
-              <div class="vc-info"><div class="vc-t">虎啸开年 · 监制<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></div><div class="vc-u">监制作品</div></div>
             </a>
           </div>
         </div>
       </div>
     </article>
 
+
+
     <!-- 案例3 反诈 AI营销 -->
     <article class="case">
       <div class="case-head">
-        <span class="case-badge">精选 03 · AI 营销</span>
+        <span class="case-badge">精选 05 · AI 营销</span>
         <h3 class="case-title">港城大智能反诈联合实验室 · AI 赋能反诈传播与公益营销</h3>
         <div class="case-meta"><span><b>角色</b> 项目小组成员 · AI 数据分析</span><span><b>时间</b> 2025.09 – 2026.08</span><span><b>标签</b> AI 赋能用户洞察 × 营销创新</span></div>
       </div>
@@ -762,7 +885,7 @@ footer{background:var(--ink);color:#cbd5e1;padding:72px 0 40px}
             <span class="ftag out">成果 · Result</span>
             <ul>
               <li>输出<strong class="green">特征规律报告与可视化成果</strong>，直接支撑反诈宣传物料与风险防控落地</li>
-              <li>数据洞察 → 内容物料 → 博主传播，形成「AI 赋能营销创新」完整闭环</li>
+              <li>打通「受众洞察 → 科普内容 → 渠道分发 → 效果评估」的公益战役全链路，AI 数据环节贯穿战役的洞察与效果两端</li>
             </ul>
           </div>
           <div class="fcard">
@@ -801,9 +924,9 @@ footer{background:var(--ink);color:#cbd5e1;padding:72px 0 40px}
           </div>
         </div>
 
-        <!-- KMeans 核心代码（本人编写） -->
+        <!-- KMeans 核心代码 -->
         <div class="code-block">
-          <div class="cb-head"><span>KMeans 聚类画像.py · 受害者分群 → 画像报告（Python / sklearn）</span><span>本人编写</span></div>
+          <div class="cb-head"><span>KMeans 聚类画像.py · 受害者分群 → 画像报告（Python / sklearn）</span><span>核心实现片段</span></div>
           <pre><code><span class="c"># 深度过滤：只保留高质量样本进行画像</span>
 <span class="n">df_model</span> = <span class="n">df_raw</span>[
     (<span class="n">df_raw</span>[<span class="s">'age_group'</span>] != <span class="s">'Unknown'</span>) &amp;
@@ -866,7 +989,7 @@ footer{background:var(--ink);color:#cbd5e1;padding:72px 0 40px}
     <!-- 案例4 App -->
     <article class="case">
       <div class="case-head">
-        <span class="case-badge">精选 04 · 产品</span>
+        <span class="case-badge">精选 06 · 产品</span>
         <h3 class="case-title">TripFlow · 智能旅行助手 App（项目小组成员之一 · 未上线）</h3>
         <div class="case-meta"><span><b>角色</b> 项目成员 · AI 辅助开发</span><span><b>时间</b> 2026.03 – 2026.04</span><span><b>标签</b> 产品思维 × AI 辅助开发</span></div>
       </div>
@@ -913,6 +1036,7 @@ footer{background:var(--ink);color:#cbd5e1;padding:72px 0 40px}
           <div class="phone"><img src="assets/img/app_expenses.png" alt="费用"><div class="pn">费用 · 报销状态机</div></div>
           <div class="phone"><img src="assets/img/app_diary.png" alt="日记"><div class="pn">日记 · 图文记录</div></div>
         </div>
+        <div class="swipe-tip">‹ 左右滑动查看 ›</div>
 
         <!-- 代码展示 -->
         <div class="code-block">
@@ -939,70 +1063,7 @@ packingItems.<span class="f">add</span>(<span class="f">PackingItem</span>(
       </div>
     </article>
 
-    <!-- 案例5 大众ID & 斯柯达 -->
-    <article class="case">
-      <div class="case-head">
-        <span class="case-badge">精选 05 · 创意策划</span>
-        <h3 class="case-title">上汽大众 ID.家族 & 斯柯达 · 场景化创意策划</h3>
-        <div class="case-meta"><span><b>角色</b> 创意策划 · 脚本分镜</span><span><b>时间</b> 2022.04 – 2022.07</span><span><b>标签</b> 娱乐化内容创意 × 场景叙事</span></div>
-      </div>
-      <div class="case-body">
-        <div class="four">
-          <div class="fcard">
-            <span class="ftag act">背景 · Challenge</span>
-            <ul>
-              <li>为<strong>上汽大众 ID.家族车机系统</strong>与<strong>斯柯达品牌</strong>策划系列短视频，解决功能点生硬、难传播的问题</li>
-              <li>把「车机 APP 联动 / 远程控车 / 世界杯直播」等功能点，做成<strong>有剧情、有情绪、可传播</strong>的娱乐化内容</li>
-            </ul>
-          </div>
-          <div class="fcard">
-            <span class="ftag">动作 · Action</span>
-            <ul>
-              <li><strong>大众 ID 系列</strong>：产出多版 video option 创意（车机×网易云 / 咪咕 / 小组件），每个功能点对应一个生活化剧情</li>
-              <li><strong>斯柯达</strong>：策划「致敬冰雪赛场」系列短视频，绑定 2022 冬奥节点与赛场情感场景</li>
-              <li>从创意概念、分镜脚本到拍摄执行全流程输出</li>
-            </ul>
-          </div>
-          <div class="fcard">
-            <span class="ftag out">成果 · Result</span>
-            <ul>
-              <li>多支创意方案落地成片，并在<strong class="green">官方视频号发布</strong>（见下方成片链接）</li>
-              <li>把生硬的汽车功能点转化为<strong class="green">有记忆点的剧情化内容</strong>，提升传播力与品牌好感度</li>
-            </ul>
-          </div>
-          <div class="fcard">
-            <span class="ftag">呈现 · Evidence</span>
-            <ul>
-              <li>斯柯达「致敬冰雪赛场」系列成片 ×3（视频号已上线）</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="case-media">
-        <!-- 斯柯达 致敬冰雪赛场系列 -->
-        <div class="plan-block">
-          <div class="pb-head">斯柯达 · 致敬冰雪赛场系列<span class="meta">2022 冬奥节点 · 3 支成片已上线视频号</span></div>
-          <div class="pg-text">
-            <ul>
-              <li><strong>致敬冰雪赛场系列</strong>：2022 年 2 月冬奥节点上线，以「心怀梦想 · 为赛场喝彩」为主题，系列 3 支成片（梦在发芽 / 心中有梦 / 不忘初心），把品牌精神与冬奥赛场情感绑定</li>
-              <li>从创意概念、脚本分镜到拍摄执行全流程输出，成片已在官方视频号发布</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- 视频链接 -->
-        <div class="vid-block">
-          <h5>成片视频 · 微信视频号</h5>
-          <div class="hint">斯柯达致敬冰雪赛场系列 3 支 + 大众 ID 中秋成片</div>
-          <div class="vid-links">
-            <a class="vlink" href="https://weixin.qq.com/sph/ARxjVjQrOp" target="_blank" rel="noopener"><span class="pl">▶</span><span><span class="vt">大众 ID · 中秋成片<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></span><span class="vu">ID 家族车机系列</span></span></a>
-            <a class="vlink" href="https://weixin.qq.com/sph/ABcqBIYev9" target="_blank" rel="noopener"><span class="pl">▶</span><span><span class="vt">斯柯达 · 致敬冰雪赛场 ①<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></span><span class="vu">「梦在发芽，长成巨树」</span></span></a>
-            <a class="vlink" href="https://weixin.qq.com/sph/AM0glQkbOP" target="_blank" rel="noopener"><span class="pl">▶</span><span><span class="vt">斯柯达 · 致敬冰雪赛场 ②<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></span><span class="vu">「心中有梦，哪里都是赛场」</span></span></a>
-            <a class="vlink" href="https://weixin.qq.com/sph/Au1xDdpb6m" target="_blank" rel="noopener"><span class="pl">▶</span><span><span class="vt">斯柯达 · 致敬冰雪赛场 ③<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></span><span class="vu">「不忘初心，心怀梦想」</span></span></a>
-          </div>
-        </div>
-      </div>
-    </article>
+    
 
     <div class="sec-action">
       <a class="btn btn-primary" href="#more">查看其他项目 →</a>
@@ -1020,10 +1081,10 @@ packingItems.<span class="f">add</span>(<span class="f">PackingItem</span>(
     </div>
     <div class="more-grid">
       <div class="more-card">
-        <h4>上海迪伦律师事务所 · 私域社群与内容矩阵</h4>
-        <div class="role">新媒体运营 · 2022.08 – 2024.11</div>
-        <p>线下普法引流线上沉淀：设计「法律工具包/避坑指南 PDF」进群钩子，搭建 15 个法律咨询社群；首创《迪伦动态》《迪伦视野》两大品牌栏目，公众号日更建立信任资产。<b>其中年创收 150 万+ 主要来自主导跟进、谈判促成的 1 家大客户常年法律顾问案</b>——从内容获客、线索跟进到商务成交的完整销售闭环。</p>
-        <div class="nums"><span>进群留存 45-60%</span><span>月均线索 20-30 条</span><span>大客户常年顾问案 · 创收主力</span><span>全渠道月曝光 +180%</span></div>
+        <h4>上海迪伦律师事务所 · 获客 × 信任 × 成交全链路</h4>
+        <div class="role">新媒体运营 × 谈案促成 · 2022.08 – 2024.11</div>
+        <p><b>获客 · 线索</b>：线下普法活动引流线上沉淀，设计「法律工具包 / 避坑指南 PDF」进群钩子，搭建 15 个法律咨询社群，沉淀月均线索 20-30 条。<b>内容 · 信任</b>：首创《迪伦动态》《迪伦视野》两大品牌栏目，公众号日更输出专业内容建立信任资产，社群进群留存 45-60%。<b>转化 · 谈案</b>：深度参与多起房屋租赁、劳动纠纷案，以及标的额千万级离婚纠纷大案的谈案与促成——从客户需求诊断、方案讲解到成交谈判全程跟进。<b>成交 · 创收</b>：协助律所年度创收 150 万+，千万级大客户案为主要占比，跑通「线索 → 信任 → 成交」完整转化链路。</p>
+        <div class="nums"><span>进群留存 45-60%</span><span>月均线索 20-30 条</span><span>千万级大案 + 多起纠纷案 · 谈案促成</span></div>
       </div>
       <div class="more-card">
         <h4>携程数据爬虫 · 「免费景点流量密码」研究</h4>
@@ -1069,12 +1130,15 @@ sight_cards = soup.<span class="f">find_all</span>(<span class="s">'div'</span>,
       <div class="more-card">
         <h4>Keeta 广告策划 · 品牌传播方案</h4>
         <div class="role">广告策划 · 硕士课程项目（COM5401）</div>
-        <p>围绕香港「时间贫困」洞察（打工仔中位工时 42.2 小时、77% 认为掌控时间即幸福），以「时间唔够用？keeta 帮你！」为核心主张，完成消费者洞察、传播策略、创意概念与 storyboard 全案。</p>
-        <div class="nums"><span>全案策划</span><span>消费者洞察</span><span>storyboard</span><span>Print Ad / 整合传播</span></div>
+        <p>围绕香港「时间贫困」洞察（打工仔中位工时 42.2 小时、77% 认为掌控时间即幸福），以「时间唔够用？keeta 帮你！」为核心主张，独立完成<strong>从消费者洞察 → Campaign Big Idea → 创意概念 → Storyboard 分镜 → Print Ad → 媒介投放策略</strong>的品牌战役全案策划，展示完整的战役思维与落地输出。</p>
+        <div class="nums"><span>消费者洞察</span><span>Campaign Idea</span><span>Storyboard 全案</span><span>Print Ad</span><span>媒介投放策略</span></div>
         <div class="more-media">
-          <img src="assets/img/keeta_cover.jpg" alt="Keeta方案封面">
-          <img src="assets/img/keeta_insight.jpg" alt="消费者洞察">
-          <img src="assets/img/keeta_printad.jpg" alt="Print Ad平面广告">
+          <img src="assets/img/keeta_cover.jpg" alt="Keeta方案封面" onclick="openLightbox('assets/img/keeta_cover.jpg')">
+          <img src="assets/img/keeta_insight.jpg" alt="消费者洞察" onclick="openLightbox('assets/img/keeta_insight.jpg')">
+          <img src="assets/img/keeta_idea.jpg" alt="Campaign Idea核心创意" onclick="openLightbox('assets/img/keeta_idea.jpg')">
+          <img src="assets/img/keeta_storyboard1.jpg" alt="Storyboard分镜1-6" onclick="openLightbox('assets/img/keeta_storyboard1.jpg')">
+          <img src="assets/img/keeta_storyboard2.jpg" alt="Storyboard分镜7-12" onclick="openLightbox('assets/img/keeta_storyboard2.jpg')">
+          <img src="assets/img/keeta_printad.jpg" alt="Print Ad平面广告" onclick="openLightbox('assets/img/keeta_printad.jpg')">
         </div>
       </div>
       <div class="more-card">
@@ -1087,9 +1151,9 @@ sight_cards = soup.<span class="f">find_all</span>(<span class="s">'div'</span>,
         </div>
         <div class="nums"><span>十余部短片</span><span>美术方案</span><span>执行导演</span><span>制片统筹</span></div>
         <div class="more-media">
-          <img src="assets/img/film_oph1.jpg" alt="沉为奥菲莉亚">
-          <img src="assets/img/film_yz1.jpg" alt="一直向前">
-          <img src="assets/img/film_cong1.jpg" alt="从">
+          <img src="assets/img/film_oph1.jpg" alt="沉为奥菲莉亚" onclick="openLightbox('assets/img/film_oph1.jpg')">
+          <img src="assets/img/film_yz1.jpg" alt="一直向前" onclick="openLightbox('assets/img/film_yz1.jpg')">
+          <img src="assets/img/film_cong1.jpg" alt="从" onclick="openLightbox('assets/img/film_cong1.jpg')">
         </div>
       </div>
     </div>
