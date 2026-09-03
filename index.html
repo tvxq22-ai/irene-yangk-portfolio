@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>杨轲 · 运营 × 市场复合候选人</title>
+<meta name="description" content="杨轲个人作品集 | 内容运营 × 品牌市场 ｜ 港城大新媒体传播硕士">
+<style>
+:root{
+  --ink:#0f172a;
+  --ink-soft:#334155;
+  --muted:#64748b;
+  --line:#e2e8f0;
+  --bg:#ffffff;
+  --bg-soft:#f8fafc;
+  --brand:#f97316;
+  --brand-deep:#ea580c;
+  --accent:#0284c7;
+  --radius:18px;
+  --shadow:0 8px 30px rgba(15,23,42,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+section{padding:88px 0}
+.sec-head{margin-bottom:48px}
+.sec-kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--brand);text-transform:uppercase}
+.sec-kicker::before{content:"";width:24px;height:2px;background:var(--brand)}
+.sec-title{font-size:clamp(26px,4vw,38px);font-weight:800;margin-top:10px;letter-spacing:-.01em}
+.sec-sub{color:var(--muted);margin-top:10px;max-width:640px}
+
+/* ===== 顶部导航 ===== */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(226,232,240,.7)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.nav-brand{font-weight:800;font-size:17px}
+.nav-brand span{color:var(--brand)}
+.nav-links{display:flex;gap:26px;font-size:14px;color:var(--ink-soft);font-weight:500}
+.nav-links a:hover{color:var(--brand)}
+
+/* ===== Hero ===== */
+header{background:linear-gradient(160deg,#0f172a 0%,#1e293b 55%,#334155 100%);color:#fff;padding:150px 0 90px;position:relative;overflow:hidden}
+header::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(249,115,22,.35),transparent 70%)}
+header::before{content:"";position:absolute;left:-100px;bottom:-160px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(2,132,199,.28),transparent 70%)}
+.hero-inner{position:relative;z-index:2}
+.hero-top{display:flex;align-items:center;gap:14px;font-size:14px;color:#cbd5e1;margin-bottom:28px}
+.hero-top .dot{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 4px rgba(74,222,128,.15)}
+.hero-name{font-size:clamp(40px,7vw,68px);font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.hero-name em{font-style:normal;background:linear-gradient(90deg,#fb923c,#f97316);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-role{font-size:clamp(19px,3vw,26px);font-weight:700;margin-top:16px;color:#f8fafc}
+.hero-role .divider{margin:0 10px;color:#64748b;font-weight:400}
+.hero-tagline{color:#94a3b8;margin-top:16px;max-width:640px;font-size:16px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.hero-tags span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:6px 14px;border-radius:999px;font-size:13px;color:#e2e8f0}
+.hero-cta{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:12px;font-weight:600;font-size:15px;transition:.2s}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{background:var(--brand-deep);transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(255,255,255,.25);color:#e2e8f0}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand);transform:translateY(-2px)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:26px;margin-top:44px;padding-top:30px;border-top:1px solid rgba(255,255,255,.12);font-size:14px;color:#cbd5e1}
+/* 小红书式个人品牌首页 */
+.hero-brand{display:flex;gap:36px;align-items:flex-start;max-width:1000px;margin:0 auto}
+.hb-avatar{flex:0 0 132px;position:relative}
+.hb-avatar img{width:132px;height:132px;border-radius:24px;object-fit:cover;position:relative;z-index:1;border:3px solid rgba(255,255,255,.18)}
+.hb-info{flex:1;min-width:0}
+.hb-info .hero-top{margin-bottom:18px}
+.hero-name .en{display:inline-block;font-size:.55em;font-weight:500;color:rgba(255,255,255,.72);margin-left:10px;letter-spacing:2px;vertical-align:middle}
+.hb-lines{margin-top:20px;display:grid;gap:9px}
+.hb-line{font-size:14.5px;color:rgba(255,255,255,.86);line-height:1.6}
+.hb-line b{color:#fff}
+.hb-line .em{color:var(--brand);font-weight:600}
+.hero-tags span.hs{color:#fbbf24}
+@media(max-width:720px){.hero-brand{flex-direction:column;align-items:center;text-align:center;gap:20px}.hb-avatar{flex:0 0 104px}.hb-avatar img{width:104px;height:104px;border-radius:19px}.hb-lines{text-align:left;justify-items:start}}
+.hero-meta b{display:block;color:#fff;font-size:15px}
+
+/* ===== 数字条 ===== */
+#stats{background:var(--bg-soft);padding:64px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.stat{text-align:center;padding:8px}
+.stat-num{font-size:clamp(28px,4vw,42px);font-weight:800;color:var(--ink);letter-spacing:-.02em}
+.stat-num i{font-style:normal;font-size:.6em;color:var(--brand)}
+.stat-num b{font-style:normal;font-weight:800}
+.stat-label{color:var(--muted);font-size:13px;margin-top:6px}
+
+/* ===== 能力 ===== */
+#skills .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.skill-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.skill-tags span{background:var(--bg-soft);border:1px solid var(--line);padding:8px 16px;border-radius:999px;font-size:14px;font-weight:500}
+.radar-box{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:28px;text-align:center}
+.radar-box h3{font-size:15px;color:var(--ink-soft);margin-bottom:6px}
+.radar-note{font-size:12px;color:var(--muted);margin-top:10px}
+
+/* ===== 精选案例 ===== */
+#cases{background:var(--bg)}
+.case{background:var(--bg);border:1px solid var(--line);border-radius:22px;overflow:hidden;margin-bottom:44px;box-shadow:var(--shadow)}
+.case-head{padding:36px 40px 8px}
+.case-badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--brand-deep);background:#fff7ed;border:1px solid #fed7aa;padding:4px 12px;border-radius:999px}
+.case-title{font-size:clamp(22px,3vw,30px);font-weight:800;margin-top:14px;letter-spacing:-.01em}
+.case-meta{display:flex;flex-wrap:wrap;gap:18px;color:var(--muted);font-size:13px;margin-top:12px}
+.case-meta b{color:var(--ink-soft);font-weight:600}
+.case-body{padding:20px 40px 8px;display:grid;grid-template-columns:1fr 1fr;gap:22px 40px}
+.four{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.fcard{border-radius:14px;padding:18px 20px;border:1px solid var(--line)}
+.fcard .ftag{font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;display:block;margin-bottom:8px}
+.fcard .ftag.act{color:var(--brand)}
+.fcard .ftag.out{color:#16a34a}
+.fcard ul{list-style:none}
+.fcard li{position:relative;padding-left:18px;font-size:14.5px;color:var(--ink-soft);margin-bottom:8px}
+.fcard li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:var(--line)}
+.fcard li strong{color:var(--ink)}
+.hl{color:var(--brand-deep);font-weight:800}
+.green{color:#16a34a;font-weight:800}
+.case-media{padding:12px 40px 36px}
+/* 案例能力标签条 */
+.ability-strip{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:18px;padding:16px 18px;background:linear-gradient(90deg,#fff7ed,#fef3c7);border:1px solid #fed7aa;border-radius:14px}
+.ability-strip .ab-tag{background:#fff;border:1px solid #fdba74;color:#c2410c;font-size:13px;font-weight:700;padding:5px 13px;border-radius:999px}
+.ability-strip .ab-note{font-size:12px;color:#9a3412;margin-left:6px;flex:1;min-width:180px}
+.media-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px}
+.media-grid .wide{grid-column:span 2;grid-row:span 2}
+.media-item{position:relative;border-radius:12px;overflow:hidden;background:#f1f5f9;border:1px solid var(--line)}
+.media-item img{width:100%;height:100%;object-fit:cover;transition:.35s;cursor:zoom-in}
+.media-item:hover img{transform:scale(1.04)}
+.media-item .cap{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(15,23,42,.82));color:#fff;font-size:12px;padding:22px 12px 8px}
+.media-strip{display:flex;gap:12px;overflow-x:auto;padding-bottom:8px;margin-top:14px}
+.media-strip img{height:300px;border-radius:12px;border:1px solid var(--line);flex-shrink:0}
+.phone-grid{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+.phone-grid .phone{width:180px;border-radius:22px;border:1px solid var(--line);overflow:hidden;box-shadow:var(--shadow);background:#fff}
+.phone-grid .phone img{width:100%;height:auto}
+.phone-grid .phone .pn{font-size:12px;color:var(--muted);text-align:center;padding:8px 4px 12px}
+
+/* ===== 视频链接占位区 ===== */
+.vid-block{margin-top:14px;background:var(--bg-soft);border:1px dashed #cbd5e1;border-radius:14px;padding:18px 20px}
+.vid-block h5{font-size:14px;font-weight:700;display:flex;align-items:center;gap:8px;margin-bottom:12px;color:var(--ink)}
+.vid-block h5::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--brand)}
+.vid-block .hint{font-size:12px;color:var(--muted);margin-bottom:12px}
+.vid-links{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.vlink{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:13px;color:var(--ink-soft);transition:.2s;width:100%;min-width:0;text-align:left}
+@media(max-width:720px){.vid-links{grid-template-columns:repeat(2,1fr)}}
+.vlink:hover{border-color:var(--brand);color:var(--brand);transform:translateY(-2px)}
+.vlink .pl{width:34px;height:34px;border-radius:9px;background:var(--brand);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:14px;flex-shrink:0}
+.vlink .vt{font-weight:700;color:var(--ink);display:block;font-size:13px}
+.vlink .vu{color:var(--muted);font-size:12px}
+.vlink .tag{display:inline-block;background:#fef3c7;color:#b45309;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;margin-left:4px}
+
+.script-viz{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
+.script-viz figure{margin:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg)}
+.script-viz img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover}
+.script-viz figcaption{font-size:11.5px;color:var(--muted);padding:7px 10px}
+@media(max-width:720px){.script-viz{grid-template-columns:1fr}}
+
+/* ===== 脚本节选表格 ===== */
+.script-block{margin-top:14px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.script-block .sb-head{background:var(--bg-soft);padding:10px 16px;font-size:13px;font-weight:700;color:var(--ink-soft);display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);flex-wrap:wrap;gap:6px}
+.script-block .sb-head .meta{color:var(--muted);font-weight:500;font-size:12px}
+.script-table{width:100%;border-collapse:collapse;font-size:13px}
+.script-table th{background:var(--bg-soft);color:var(--muted);font-weight:600;text-align:left;padding:8px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+.script-table td{padding:10px 12px;border-bottom:1px solid var(--line);color:var(--ink-soft);vertical-align:top}
+.script-table tr:last-child td{border-bottom:none}
+.script-table .shot{color:var(--brand);font-weight:700;white-space:nowrap}
+.script-table .talk{color:var(--ink)}
+
+/* ===== 策划案卡片 ===== */
+.plan-block{margin-top:14px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.plan-block .pb-head{background:var(--bg-soft);padding:10px 16px;font-size:13px;font-weight:700;color:var(--ink-soft);display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}
+.plan-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.plan-grid .pg-text{padding:16px 18px}
+.plan-grid .pg-text ul{list-style:none}
+.plan-grid .pg-text li{position:relative;padding-left:18px;font-size:13.5px;color:var(--ink-soft);margin-bottom:8px}
+.plan-grid .pg-text li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--brand)}
+.plan-grid .pg-text li strong{color:var(--ink)}
+.plan-grid .pg-imgs{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:12px}
+.plan-grid .pg-imgs img{width:100%;height:120px;object-fit:cover;border-radius:8px;border:1px solid var(--line)}
+.plan-block > .pg-text{padding:16px 18px}
+.plan-block > .pg-text ul{list-style:none}
+.plan-block > .pg-text li{position:relative;padding-left:18px;font-size:13.5px;color:var(--ink-soft);margin-bottom:8px}
+.plan-block > .pg-text li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--brand)}
+.plan-block > .pg-text li strong{color:var(--ink)}
+.plan-block > .pg-text li em{color:var(--ink);font-style:normal;background:#fff7ed;padding:1px 5px;border-radius:4px}
+.plan-block > .pg-imgs{display:grid;gap:8px;padding:14px 16px;border-top:1px dashed var(--line)}
+.plan-block > .pg-imgs img{width:100%;height:140px;object-fit:cover;border-radius:8px;border:1px solid var(--line)}
+.plan-block > .pg-imgs .cap{font-size:11px;color:var(--muted);text-align:center;margin-top:4px}
+.src-link{padding:12px 18px;border-top:1px dashed var(--line);font-size:13px;color:var(--muted)}
+.src-link a{color:var(--brand);font-weight:600;text-decoration:none;word-break:break-all}
+.src-link a:hover{text-decoration:underline}
+
+/* ===== 代码展示 ===== */
+.code-block{margin-top:14px;background:#0f172a;border-radius:14px;overflow:hidden}
+.code-block .cb-head{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;background:rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.08);font-size:12px;color:#94a3b8}
+.code-block pre{margin:0;padding:16px 18px;overflow-x:auto;font-family:"SF Mono",Menlo,Consolas,"Courier New",monospace;font-size:12.5px;line-height:1.75;color:#e2e8f0}
+.code-block code .k{color:#fb923c}
+.code-block code .s{color:#a5d6a7}
+.code-block code .c{color:#64748b;font-style:italic}
+.code-block code .f{color:#7dd3fc}
+.code-block code .n{color:#f8fafc}
+
+/* ===== 更多项目带图 ===== */
+.more-media{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.more-media img{width:100%;height:96px;object-fit:cover;border-radius:8px;border:1px solid var(--line)}
+.award-list{margin-top:12px;display:flex;flex-direction:column;gap:8px}
+.award{display:flex;gap:10px;align-items:flex-start;background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;padding:8px 12px;font-size:13px;color:var(--ink-soft)}
+.award .t{color:var(--brand-deep);font-weight:700;flex-shrink:0}
+.award-list .award .bd{font-size:12.5px;color:var(--muted);margin-top:2px}
+
+/* ===== TVC制作全流程Timeline ===== */
+.tl-block{margin-top:14px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.tl-block .tl-head{background:var(--bg-soft);padding:10px 16px;font-size:13px;font-weight:700;color:var(--ink-soft);display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);flex-wrap:wrap;gap:6px}
+.tl-block .tl-head .meta{color:var(--muted);font-weight:500;font-size:12px}
+.tl-track{display:flex;overflow-x:auto;gap:0;padding:34px 20px 18px;position:relative}
+.tl-track::before{content:"";position:absolute;left:34px;right:34px;top:36px;height:3px;background:#e2e8f0}
+.tl-step{flex:0 0 auto;width:128px;position:relative;padding-top:18px}
+.tl-step .dot{position:absolute;top:4px;left:50%;transform:translateX(-50%);width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--brand);z-index:2}
+.tl-step.done .dot{background:var(--brand)}
+.tl-step .st{font-size:13px;font-weight:700;color:var(--ink);line-height:1.4;text-align:center}
+.tl-step .sub{font-size:11px;color:var(--muted);margin-top:3px;text-align:center}
+
+/* ===== 创意策划视频方案 ===== */
+.vo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+.vo-card{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--bg)}
+.vo-card .vo-tag{display:inline-block;font-size:11px;font-weight:800;color:var(--accent);background:#f0f9ff;border:1px solid #bae6fd;padding:3px 10px;border-radius:999px;letter-spacing:.05em;margin-bottom:10px}
+.vo-card h5{font-size:15px;font-weight:700;margin-bottom:8px}
+.vo-card p{font-size:13px;color:var(--ink-soft);line-height:1.8}
+
+/* ===== 视频图片卡片 ===== */
+.vid-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin-top:14px}
+.vid-card{position:relative;border:1px solid var(--line);border-radius:12px;overflow:hidden;display:block;text-decoration:none;background:var(--bg);transition:box-shadow .2s,transform .2s}
+.vid-card:hover{box-shadow:0 8px 24px rgba(15,23,42,.10);transform:translateY(-2px)}
+.vid-card img{width:100%;height:150px;object-fit:cover;display:block}
+.vid-card .vc-play{position:absolute;top:0;left:0;right:0;height:150px;display:flex;align-items:center;justify-content:center;background:rgba(15,23,42,.32)}
+.vid-card .vc-play span{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.94);display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--brand);box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.vid-card .vc-info{padding:10px 12px}
+.vid-card .vc-t{font-size:13.5px;font-weight:700;color:var(--ink);line-height:1.4}
+.vid-card .vc-u{font-size:11.5px;color:var(--muted);margin-top:3px}
+
+/* ===== 数据图鉴（反诈） ===== */
+.fraud-chart-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+.fraud-chart-grid figure{margin:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg)}
+.fraud-chart-grid img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover}
+.fraud-chart-grid figcaption{font-size:11.5px;color:var(--muted);padding:7px 10px;line-height:1.4}
+@media(max-width:720px){.fraud-chart-grid{grid-template-columns:repeat(2,1fr)}}
+
+.tl-note{display:flex;gap:16px;margin-top:16px;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.tl-note img{width:340px;max-width:42%;border-radius:8px;object-fit:cover}
+.tl-note-txt{flex:1;font-size:12.5px;color:var(--muted);line-height:1.65}
+.tl-note-txt strong{color:var(--ink);font-size:13.5px}
+.tl-note-txt b{color:var(--brand)}
+@media(max-width:720px){.tl-note{flex-direction:column}.tl-note img{width:100%;max-width:100%}}
+
+/* ===== H5 字体合集（竖版长图） ===== */
+.h5-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px}
+.h5-grid figure{margin:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg)}
+.h5-grid img{width:100%;display:block;max-height:520px;object-fit:cover;object-position:top;cursor:zoom-in;transition:opacity .2s}
+.h5-grid img:hover{opacity:.85}
+.h5-grid figcaption{font-size:12px;color:var(--muted);padding:9px 12px;line-height:1.5}
+.h5-grid .zoom-hint{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:var(--brand);font-weight:600}
+@media(max-width:720px){.h5-grid{grid-template-columns:1fr}}
+
+/* ===== 文案×复刻爆款工作流 ===== */
+.copy-work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.copy-work-grid figure{margin:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg)}
+.copy-work-grid img{width:100%;display:block;height:215px;object-fit:cover;cursor:zoom-in;transition:opacity .2s}
+.copy-work-grid img:hover{opacity:.85}
+.copy-work-grid figcaption{font-size:11.5px;color:var(--muted);padding:7px 10px;line-height:1.4}
+@media(max-width:720px){.copy-work-grid{grid-template-columns:repeat(2,1fr)}.copy-work-grid img{height:160px}}
+
+/* ===== Lightbox 全图预览 ===== */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(15,23,42,.95);z-index:999;overflow:auto;padding:44px 0;cursor:zoom-out}
+.lb-inner{min-height:100%;display:flex;align-items:flex-start;justify-content:center}
+.lightbox img{display:block;max-width:96vw;height:auto;border-radius:8px;box-shadow:0 12px 40px rgba(0,0,0,.5)}
+.lb-close{position:fixed;top:16px;right:22px;font-size:26px;color:#fff;cursor:pointer;z-index:1000;background:rgba(0,0,0,.45);width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;user-select:none}
+.lb-close:hover{background:rgba(249,115,22,.7)}
+
+/* ===== 文案展示 ===== */
+.copy-block{margin-top:14px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.copy-block .cp-head{background:var(--bg-soft);padding:10px 16px;font-size:13px;font-weight:700;color:var(--ink-soft);display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);flex-wrap:wrap;gap:6px}
+.copy-block .cp-head .meta{color:var(--muted);font-weight:500;font-size:12px}
+.copy-body{padding:18px 20px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.copy-item{background:var(--bg-soft);border-left:3px solid var(--brand);border-radius:8px;padding:14px 16px}
+.copy-item .ct{font-size:12px;font-weight:700;color:var(--brand);letter-spacing:.08em;margin-bottom:8px}
+.copy-item p{font-size:14px;color:var(--ink-soft);line-height:1.9}
+.copy-item .slogan{color:var(--brand-deep);font-weight:700}
+
+/* ===== 外链列表 ===== */
+.link-list{display:flex;flex-direction:column;gap:8px;padding:14px 18px}
+.ext-link{display:flex;align-items:center;gap:10px;background:var(--bg-soft);border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:13.5px;color:var(--ink-soft);transition:.2s}
+.ext-link:hover{border-color:var(--brand);color:var(--brand);transform:translateX(3px)}
+.ext-link .t{font-weight:600}
+
+.video-line{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+.vchip{display:inline-flex;align-items:center;gap:6px;background:var(--bg-soft);border:1px solid var(--line);padding:8px 16px;border-radius:999px;font-size:13px;color:var(--ink-soft)}
+.vchip .pl{width:22px;height:22px;border-radius:50%;background:var(--brand);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:10px}
+.sec-action{text-align:center;margin-top:8px}
+.sec-action .btn{margin:0 6px}
+
+/* ===== 更多项目 ===== */
+#more{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.more-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.more-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 28px;transition:.25s}
+.more-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.more-card h4{font-size:18px;font-weight:700}
+.more-card .role{color:var(--brand);font-size:13px;font-weight:600;margin-top:4px}
+.more-card p{color:var(--ink-soft);font-size:14.5px;margin-top:12px}
+.more-card .nums{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.more-card .nums span{background:#fff7ed;border:1px solid #fed7aa;color:var(--brand-deep);font-size:12.5px;font-weight:700;padding:4px 12px;border-radius:999px}
+
+/* ===== 关于我 ===== */
+#about .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:start}
+.edu-item{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--line)}
+.edu-item:last-child{border-bottom:none}
+.edu-item .y{min-width:120px;color:var(--brand);font-weight:700;font-size:14px}
+.edu-item h5{font-size:17px;font-weight:700}
+.edu-item p{color:var(--muted);font-size:14px;margin-top:4px}
+.about-list{margin-top:24px}
+.about-list li{list-style:none;padding-left:22px;position:relative;color:var(--ink-soft);font-size:15px;margin-bottom:14px}
+.about-list li::before{content:"▸";position:absolute;left:0;color:var(--brand);font-weight:700}
+
+/* ===== Footer / 联系 ===== */
+footer{background:var(--ink);color:#cbd5e1;padding:72px 0 40px}
+.foot-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.foot-grid h3{color:#fff;font-size:22px;font-weight:800}
+.foot-grid p{color:#94a3b8;margin-top:12px;font-size:15px}
+.contact-rows{display:flex;flex-direction:column;gap:14px;margin-top:24px}
+.crow{display:flex;align-items:center;gap:14px;font-size:15px}
+.crow .ic{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.08);display:inline-flex;align-items:center;justify-content:center;color:var(--brand);font-weight:700}
+.crow a:hover{color:var(--brand)}
+.qr-place{border:1px dashed rgba(255,255,255,.25);border-radius:14px;padding:24px;text-align:center;color:#94a3b8;font-size:13px;margin-top:20px;background:rgba(255,255,255,.03)}
+.copyright{text-align:center;color:#64748b;font-size:13px;margin-top:56px;border-top:1px solid rgba(255,255,255,.08);padding-top:28px}
+
+/* ===== 响应式 ===== */
+@media(max-width:900px){
+  section{padding:64px 0}
+  .stats-grid{grid-template-columns:repeat(3,1fr);gap:26px 12px}
+  #skills .wrap,#about .wrap{grid-template-columns:1fr;gap:36px}
+  .case-body,.four{grid-template-columns:1fr}
+  .media-grid{grid-template-columns:repeat(2,1fr)}
+  .plan-grid{grid-template-columns:1fr}
+  .copy-body{grid-template-columns:1fr}
+  .vo-grid{grid-template-columns:1fr}
+  .script-table{font-size:12px}
+  .script-table th,.script-table td{padding:6px 8px}
+  .more-media{grid-template-columns:repeat(3,1fr)}
+  .more-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .case-head,.case-body,.case-media{padding-left:24px;padding-right:24px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="nav-brand">IRENE<span>.</span>杨轲</div>
+    <div class="nav-links">
+      <a href="#cases">精选案例</a>
+      <a href="#more">更多项目</a>
+      <a href="#skills">核心能力</a>
+      <a href="#about">关于我</a>
+      <a href="#contact">联系</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<header id="top">
+  <div class="wrap hero-inner">
+    <div class="hero-brand">
+      <div class="hb-avatar"><img src="assets/img/portrait.jpg" alt="杨轲 Irene"></div>
+      <div class="hb-info">
+        <div class="hero-top"><span class="dot"></span> 运营 × 市场 · 双线实战经验</div>
+        <h1 class="hero-name">杨轲<span class="en">IRENE</span></h1>
+        <div class="hero-role">内容 × 数据 × AI · 会拍广告片的运营</div>
+        <p class="hero-tagline">从字库账号 0→1 冷启动，到律所私域年创收 150w+、单条视频曝光 300w+——我以「内容 + 数据 + 节点」驱动增长，把 AI 能力融入运营全链路。</p>
+        <div class="hb-lines">
+          <div class="hb-line">📍 <b>香港城市大学</b> · 新媒体传播 硕士在读</div>
+          <div class="hb-line">🎓 <b>上海大学</b>·艺术与科技 + 上海温哥华电影学院（辅修电影制作）</div>
+          <div class="hb-line">💼 汉仪字库 C端内容运营 → <span class="em">小米畅销榜 Top10</span></div>
+          <div class="hb-line">📈 律所私域年创收 <span class="em">150w+</span> / 单条视频曝光 <span class="em">300w+</span></div>
+          <div class="hb-line">🎬 肖战 TVC 执行导演 / 奥迪 A7L 黑武士执行制片</div>
+          <div class="hb-line">🤖 <span class="em">AI 营销赋能</span>：10w+ 文本爬取 + KMeans 画像 + 预测 Demo</div>
+        </div>
+        <div class="hero-tags">
+          <span class="hs">#内容运营</span><span class="hs">#品牌创意</span><span class="hs">#数据洞察</span><span class="hs">#AI赋能</span><span class="hs">#短视频策划</span>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#cases">查看作品案例 →</a>
+          <a class="btn btn-ghost" href="#contact">联系我</a>
+        </div>
+        <div class="hero-meta">
+          <div><b>yangkee99@163.com</b>邮箱</div>
+          <div><b>上海 · 可全国</b>Base</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== 数字条 ===== -->
+<section id="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat"><div class="stat-num">300<i>万+</i></div><div class="stat-label">单条视频全网曝光</div></div>
+      <div class="stat"><div class="stat-num">Top<b>10</b></div><div class="stat-label">小米字体畅销榜</div></div>
+      <div class="stat"><div class="stat-num">150<i>w+</i></div><div class="stat-label">私域年创收</div></div>
+      <div class="stat"><div class="stat-num">10<i>w+</i></div><div class="stat-label">诈骗新闻文本爬取</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 核心能力 ===== -->
+<section id="skills">
+  <div class="wrap">
+    <div>
+      <div class="sec-kicker">Core Capabilities</div>
+      <h2 class="sec-title">全链路整合营销能力</h2>
+      <p class="sec-sub">以「内容驱动用户增长」为主线，横跨品牌广告创意、私域社群运营、电商化内容操盘三大场景，用数据与 AI 工具放大每一环的效率。</p>
+      <div class="skill-tags">
+        <span>差异化定位</span><span>榜单洞察</span><span>内容打标体系</span><span>节点运营</span>
+        <span>社群搭建与留存</span><span>短视频脚本与分镜</span><span>拍摄统筹</span>
+        <span>Python 爬虫</span><span>LLM API 调用</span><span>情感分析 / 词云</span><span>KMeans 聚类建模</span>
+        <span>数据可视化 / 看板</span><span>AI 辅助编程</span><span>AI 文案 / 图像 / 语音生成</span><span>AI 视觉物料</span>
+      </div>
+    </div>
+    <div class="radar-box">
+      <h3>能力自评雷达</h3>
+      <svg viewBox="0 0 320 300" width="100%" style="max-width:340px;margin:0 auto">
+        <!-- 网格 -->
+        <g stroke="#e2e8f0" fill="none">
+          <polygon points="160,30 282,118 244,252 76,252 38,118"/>
+          <polygon points="160,72 252,132 222,222 98,222 68,132"/>
+          <polygon points="160,114 222,146 200,192 120,192 98,146"/>
+        </g>
+        <g stroke="#e2e8f0"><line x1="160" y1="30" x2="160" y2="252"/><line x1="282" y1="118" x2="38" y2="118"/><line x1="244" y1="252" x2="76" y2="252"/></g>
+        <!-- 数据 内容创意90 / 数据分析80 / AI工具82 / 项目管理78 / 社群运营88 -->
+        <polygon points="160,48 264,129 231,238 96,226 47,128" fill="rgba(249,115,22,.18)" stroke="#f97316" stroke-width="2"/>
+        <g fill="#f97316">
+          <circle cx="160" cy="48" r="4"/><circle cx="264" cy="129" r="4"/>
+          <circle cx="231" cy="238" r="4"/><circle cx="96" cy="226" r="4"/><circle cx="47" cy="128" r="4"/>
+        </g>
+        <g fill="#334155" font-size="13" font-weight="600" text-anchor="middle">
+          <text x="160" y="18">内容创意</text>
+          <text x="310" y="122">数据分析</text>
+          <text x="246" y="272">社群运营</text>
+          <text x="74" y="272">项目管理</text>
+          <text x="10" y="122">AI 工具</text>
+        </g>
+      </svg>
+      <div class="radar-note">自评维度 · 综合工作成果与课程实践</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 精选案例 ===== -->
+<section id="cases">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker">Featured Projects</div>
+      <h2 class="sec-title">精选案例</h2>
+      <p class="sec-sub">每个案例均按「背景 → 动作 → 成果 → 呈现形式」展开，附一句核心能力标签。</p>
+    </div>
+
+    <!-- 案例1 汉仪 -->
+    <article class="case">
+      <div class="case-head">
+        <span class="case-badge">精选 01 · 运营</span>
+        <h3 class="case-title">汉仪字库集团 · 双账号 0→1 冷启动与榜单洞察</h3>
+        <div class="case-meta"><span><b>角色</b> C端内容运营（上海运营转型团队核心）</span><span><b>时间</b> 2024.12 – 2025.08</span><span><b>标签</b> 数据驱动的内容运营</span></div>
+      </div>
+      <div class="case-body">
+        <div class="four">
+          <div class="fcard">
+            <span class="ftag act">背景 · Challenge</span>
+            <ul>
+              <li>负责 <strong>2 个特设字体设计账号从 0 到 1 冷启动</strong>，在字体主题商店存量竞争中找增量</li>
+              <li>平台审美存在明显断层：<strong>OPPO/vivo 可爱-场景化占热销榜约 65%</strong>，<strong>小米/华为偏文艺-情绪化文案点击率高约 40%</strong></li>
+            </ul>
+          </div>
+          <div class="fcard">
+            <span class="ftag">动作 · Action</span>
+            <ul>
+              <li><strong>差异化定位</strong>：确立「米华日系恋爱 × OV 萌系治愈」双号定位，日拆热销前 50 榜单做风格/视觉/命名标签洞察</li>
+              <li><strong>5 维打标规范</strong>：命名、类型、预览图、主图、文案统一打标，站内榜单 + 站外趋势选品前置驱动设计迭代</li>
+              <li><strong>视觉包装</strong>：热搜热词 + 字体风格命名公式、手账场景化主图提升点击率</li>
+              <li><strong>节点运营</strong>：基于学生周末活跃 +40-60% 规律，新品卡周四下午上架；假期提前备专属系列</li>
+            </ul>
+          </div>
+          <div class="fcard">
+            <span class="ftag out">成果 · Result</span>
+            <ul>
+              <li>新品基础下载量提升 <strong class="green">+30-40%</strong></li>
+              <li>假期首日下载约为常规 <strong class="green">2.5 倍</strong></li>
+              <li>主导情人节主题合集，核心单品冲入<strong class="green">小米畅销榜前 10、飙升榜前 23</strong>，4 款进前 50，节点 3-4 倍脉冲爆发</li>
+            </ul>
+          </div>
+          <div class="fcard">
+            <span class="ftag">呈现 · Evidence</span>
+            <ul>
+              <li>华为主题商店榜单截图（收藏 6.1w 榜 9、2.1w 榜 2 等）</li>
+              <li>字体设计样例、上架场景图</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="case-media">
+        <div class="media-grid">
+          <div class="media-item wide"><img src="assets/img/hanyi_leaderboard.png" alt="字体下载量复盘"><div class="cap">多字体下载量数据复盘 · 头部字体 37.3w+</div></div>
+          <div class="media-item"><img src="assets/img/hanyi_font_preview.png" alt="字体预览界面"><div class="cap">《OS系统小猫糕体》字体预览界面</div></div>
+          <div class="media-item"><img src="assets/img/hanyi_design2.png" alt="萌系治愈文案图"><div class="cap">萌系治愈 · 「小猫乖乖只喜欢你」</div></div>
+          <div class="media-item"><img src="assets/img/hanyi_design3.png" alt="小狗文案图"><div class="cap">萌系治愈 · 「小狗的世界观」</div></div>
+          <div class="media-item"><img src="assets/img/hanyi_design4.png" alt="文艺文案图"><div class="cap">文艺情绪 · 「我把喜欢你写在风里」</div></div>
+        </div>
+
+        <!-- 节点 H5 字体合集 -->
+        <div class="plan-block">
+          <div class="pb-head">节点 H5 字体合集<span class="meta">营销节点定制 · 含切图 / 物料 / 弹窗悬浮球全案</span></div>
+          <div class="pg-text">
+            <ul>
+              <li><strong>《熬夜专用软萌粗体》H5</strong>：春节营销节点上线，猫咪睡眠主题治愈向科普长图，软萌字体 + 场景化内容打透熬夜人群</li>
+              <li><strong>《呆头呆脑有点难搞》H5</strong>：游戏化图文长图 + 弹窗/悬浮球物料，用轻互动形式带动字体下载与分享</li>
+            </ul>
+          </div>
+          <div class="h5-grid">
+            <figure><img src="assets/img/hanyi_banner_1.png" alt="熬夜专用软萌粗体H5" onclick="openLightbox('assets/img/h5_full_1.png')"><figcaption>《熬夜专用软萌粗体》H5 · 封面物料（高清版）<br><span class="zoom-hint">🔍 点击打开 H5 高清长图</span></figcaption></figure>
+            <figure><img src="assets/img/hanyi_banner_2.png" alt="呆头呆脑有点难搞H5" onclick="openLightbox('assets/img/h5_full_2.png')"><figcaption>《呆头呆脑有点难搞》H5 · 封面物料（高清版）<br><span class="zoom-hint">🔍 点击打开 H5 高清长图</span></figcaption></figure>
+          </div>
+        </div>
+
+        <!-- 文案撰写 × 复刻爆款 -->
+        <div class="plan-block">
+          <div class="pb-head">文案撰写 × 主图创意 · 复刻爆款工作流<span class="meta">爆款拆解 → 文案命名 → 设计修改 → 多平台上架</span></div>
+          <div class="pg-text">
+            <ul>
+              <li><strong>复刻爆款思路</strong>：<strong>对标各栏目畅销榜</strong>，把榜单爆款的<strong>命名逻辑 + 文案情绪 + 主图风格</strong>拆解后复制到自有字体上，用已验证的爆款路径降低上新风险</li>
+              <li><strong>文案与命名（我撰写）</strong>：为每款字体定制「最终名称 + 场景化文案」，如「好想每天都是周六」「小乖超爱猫薄荷」「和你坠落星河梦境」「倾听时光柔情低语」，并规划 vivo / 小米 / OPPO / 荣耀多平台上架</li>
+              <li><strong>小图预览图（我提修改）</strong>：向设计逐项提出「笔刷细一些 / 粉色浅一点 / 英文删一点 / 换个花朵 / 用线条图案替换英文」等批注，群内跟盯「四边不要全白，加点颜色」完成迭代</li>
+            </ul>
+          </div>
+          <div class="copy-work-grid">
+            <figure><img src="assets/img/hanyi_copy_tbl1.jpg" alt="字体需求表" onclick="openLightbox('assets/img/hanyi_copy_tbl1.jpg')"><figcaption>字体需求表 · 名称/文案/平台</figcaption></figure>
+            <figure><img src="assets/img/hanyi_copy_tbl2.jpg" alt="文案与命名库" onclick="openLightbox('assets/img/hanyi_copy_tbl2.jpg')"><figcaption>文案与命名库 · 多字体批量产出</figcaption></figure>
+            <figure><img src="assets/img/hanyi_main_final.jpg" alt="主图成品" onclick="openLightbox('assets/img/hanyi_main_final.jpg')"><figcaption>溺水蔷薇 · 迭代后成品</figcaption></figure>
+            <figure><img src="assets/img/hanyi_chat.jpg" alt="设计沟通" onclick="openLightbox('assets/img/hanyi_chat.jpg')"><figcaption>群内设计沟通 · 迭代要求</figcaption></figure>
+            <figure><img src="assets/img/hanyi_replica.jpg" alt="对标畅销榜" onclick="openLightbox('assets/img/hanyi_replica.jpg')"><figcaption>对标各栏目畅销榜</figcaption></figure>
+          </div>
+        </div>
+
+        <!-- 小米后台数据 × 榜单运营链路 -->
+        <div class="plan-block">
+          <div class="pb-head">小米后台数据 × 榜单运营链路<span class="meta">上新 → 新鲜出炉榜 → 飙升榜 → 畅销榜攀升</span></div>
+          <div class="pg-text">
+            <ul>
+              <li><strong>上新即打榜</strong>：字体上新自动进入「新鲜出炉榜」，靠首日集中曝光冲量进「飙升榜」（当天 23 名），再逐步在「畅销榜」攀升（当天 115 名）——这是日常运营的真实节奏，图为当天双榜截图</li>
+              <li><strong>H5 进精选栏</strong>：《熬夜专用软萌粗体》H5 于 4.22 上线，推广 7 天后 <strong>4.28 进入每日精选栏目</strong>获得长期曝光，位居小米平台同期销量第一（696 套）</li>
+              <li><strong>后台数据实证</strong>：小米后台 4/22–5/6 总销量 <strong>2386 套</strong>、总营收 <strong>14316 元</strong>，头部单品《熬夜专用软萌粗体》销量占比 29.17%</li>
+            </ul>
+          </div>
+          <div class="media-grid">
+            <div class="media-item"><img src="assets/img/hanyi_mi_item.png" alt="小米后台单品营业额" onclick="openLightbox('assets/img/hanyi_mi_item.png')"><div class="cap">小米后台 · 单品营业额趋势（《唯独和你纯爱封神》）</div></div>
+            <div class="media-item"><img src="assets/img/hanyi_mi_sales.png" alt="小米后台销售报表" onclick="openLightbox('assets/img/hanyi_mi_sales.png')"><div class="cap">小米后台 · 销售报表（总销量/营收/明细）</div></div>
+            <div class="media-item"><img src="assets/img/hanyi_mi_summary.png" alt="运营数据总结" onclick="openLightbox('assets/img/hanyi_mi_summary.png')"><div class="cap">运营数据总结 · H5 进每日精选 + 销量排名</div></div>
+            <div class="media-item"><img src="assets/img/hanyi_fresh.png" alt="新鲜出炉榜" onclick="openLightbox('assets/img/hanyi_fresh.png')"><div class="cap">上新进「新鲜出炉榜」· 首日集中曝光</div></div>
+            <div class="media-item"><img src="assets/img/hanyi_rank.png" alt="畅销飙升双榜" onclick="openLightbox('assets/img/hanyi_rank.png')"><div class="cap">当日榜单 · 畅销 115 / 飙升 23（真实截图）</div></div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="case">
+      <div class="case-head">
+        <span class="case-badge">精选 02 · 市场</span>
+        <h3 class="case-title">上汽奥迪 / 上汽大众 · 年框品牌内容创意与制作</h3>
+        <div class="case-meta"><span><b>角色</b> 广告创意 · 执行导演 · 执行制片</span><span><b>时间</b> 2022.01 – 2022.08</span><span><b>标签</b> 品牌内容创意与传播</span></div>
+      </div>
+      <div class="case-body">
+        <div class="four">
+          <div class="fcard">
+            <span class="ftag act">背景 · Challenge</span>
+            <ul>
+              <li>服务<strong>上汽奥迪、上汽大众官方账号年框内容</strong>，解决品牌广告内容同质化、用户关注度低的问题</li>
+            </ul>
+          </div>
+          <div class="fcard">
+            <span class="ftag">动作 · Action</span>
+            <ul>
+              <li>拆解 <strong>100+ 爆款广告</strong>的叙事与分镜逻辑，基于品牌用户画像与平台算法针对节点定制内容版本</li>
+              <li>累计产出 <strong>30+ 支广告脚本</strong>，覆盖明星代言 TVC、新品功能创意、节日/快闪等场景</li>
+              <li><strong>肖战《喜欢上海的理由》TVC 现场执行导演</strong>：主导镜头调度、现场执行与文案共创</li>
+              <li><strong>奥迪 A7L「黑武士」TVC 执行制片 / 场记</strong>：对接客户、制片、演员、后期，统筹拍摄全流程</li>
+            </ul>
+          </div>
+          <div class="fcard">
+            <span class="ftag out">成果 · Result</span>
+            <ul>
+              <li><strong class="green">5 支投放后播放量破百万</strong>，平均互动率 <strong class="green">8%</strong>，高于行业均值 3 个百分点</li>
+              <li>《喜欢上海的理由》城市情怀视频<strong class="green">全网曝光 300 万+、互动超 15 万</strong></li>
+              <li>高效推进 <strong class="green">15+ 支广告</strong>制作交付，项目周期平均缩短 <strong class="green">15%</strong></li>
+            </ul>
+          </div>
+          <div class="fcard">
+            <span class="ftag">呈现 · Evidence</span>
+            <ul>
+              <li>年框内多支<strong>已上线 TVC</strong>：肖战《喜欢上海的理由》/ A7L 黑武士 / 虎啸开年 / 燕之屋《传承》/ 大众 ID 中秋 / 斯柯达 · 致敬冰雪赛场 ×3</li>
+              <li>一条能力链贯穿：<strong>创意策划 → 文案共创 → 编导分镜 → 执行导演 → 执行制片 / 场记 → 后期统筹</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="case-media">
+        <!-- 本案例体现的能力 -->
+        <div class="ability-strip">
+          <span class="ab-tag">创意策划</span><span class="ab-tag">文案共创</span><span class="ab-tag">编导分镜</span><span class="ab-tag">执行导演</span><span class="ab-tag">执行制片</span><span class="ab-tag">项目统筹</span>
+          <div class="ab-note">年框案例一图看懂：从创意到成片，6 项能力贯穿全流程</div>
+        </div>
+        <!-- 策划案截图 -->
+        <div class="plan-block">
+          <div class="pb-head">策划案 ·《上汽奥迪「心」服务采访视频方案》<span class="meta">创意策划 + 拍摄执行案</span></div>
+          <div class="plan-grid">
+            <div class="pg-text">
+              <ul>
+                <li><strong>创意核心</strong>：8 集「心服务」系列短片，以店长 / 市场官 / 管家 / 主播多角色口吻讲透新零售私域运营流程</li>
+                <li><strong>呈现手法</strong>：人物采访 + 流程可视化 + 特效字幕，把 AMS 平台、销售漏斗等抽象系统讲得通俗</li>
+                <li><strong>执行范围</strong>：从脚本分镜、拍摄统筹到后期字幕特效全流程</li>
+              </ul>
+            </div>
+            <div class="pg-imgs">
+              <img src="assets/img/audi_interview1.jpg" alt="采访画面参考">
+              <img src="assets/img/audi_interview2.jpg" alt="采访画面参考">
+            </div>
+          </div>
+        </div>
+
+        <!-- 文案能力 -->
+        <div class="copy-block">
+          <div class="cp-head">文案共创 × 创意编导 · 燕之屋 30s/60s 品牌 TVC<span class="meta">东方养生调性 · 文案共创 + 创意编导</span></div>
+          <div class="copy-body">
+            <div class="copy-item">
+              <div class="ct">开篇 · 意象营造</div>
+              <p>「时间，酝酿千金不换的礼藏<br>只为，静候她（它）出场」<br><br>「采撷天地精华<br>于指尖匠心成就珍贵」</p>
+            </div>
+            <div class="copy-item">
+              <div class="ct">落点 · 品牌主张</div>
+              <p>「以匠艺传承为底<br>以品质坚守作序<br>以科技再造，收藏时光之味」<br><br><span class="slogan">「吃燕窝，就选燕之屋」</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 第三方佐证 -->
+        <div class="plan-block">
+          <div class="pb-head">第三方佐证 · 媒体解读<span class="meta">「品牌与策划」公众号 2022.08 对燕之屋《传承》TVC 的公开分析</span></div>
+          <div class="pg-text">
+            <ul>
+              <li><strong>创意内核被媒体还原为「穿越古今」</strong>：将燕窝古法制造场景与燕之屋现代生产实验室相结合，借势中秋节点与国潮趋势，占位「国潮 · 高端 · 品质」</li>
+              <li><strong>文中引用的成片文案（与左侧文案节选同源）</strong>：<em>"传承千年燕窝养生文化，24年专注高品质燕窝，凝结自然精华，秉承古法技艺，浓浓滋养，碗碗尊贵——一口燕窝，穿越千年"</em></li>
+              <li><strong>整合传播动作</strong>：同步发起古风手绘大赛、开启抖音直播间，为消费者带来「中秋东方礼」，在节点流量中强化品牌「高端 · 品质 · 东方美」心智</li>
+            </ul>
+          </div>
+          <div class="src-link">📄 媒体报道：<a href="https://mp.weixin.qq.com/s/r0KbRSIkArwmhg-yngrRaA" target="_blank" rel="noopener">《传承千年燕窝养生文化，燕之屋&赵丽颖穿越大片艳绝东方》· 品牌与策划</a></div>
+        </div>
+
+        <!-- 燕之屋 PPM -->
+        <div class="plan-block">
+          <div class="pb-head">PPM · 拍摄前制作会议<span class="meta">燕之屋品牌代言人 TVC PPM · 2022/5/24</span></div>
+          <div class="pg-text">
+            <ul>
+              <li><strong>60s 创意主线</strong>：时光回溯，臻品燕窝传入宫廷 → 金色粒子化作燕子穿越古今 → 代言人宫廷场景 → 现代实验室「碗燕」→ 落版「吃燕窝，就选燕之屋」</li>
+              <li><strong>导演分镜执行脚本</strong>：8 大场景（SENCE 1–8：屏风 / 水面燕盏 / 帷幔 / 艺人与工匠 / 通道 / 现代空间），配套影调、美术、服装发型参考</li>
+              <li><strong>制作进度表 SCHEDULE</strong>：产品提供清单（燕盏、碗燕各 30 碗、礼盒 15 个等）与拍摄排期</li>
+            </ul>
+          </div>
+          <div class="src-link">📎 PPM 文档：燕之屋品牌代言人 TVC PPM（导演介绍 / 广告创意 / 分镜执行脚本 / 影调美术参考 / 制作进度表）</div>
+          <div class="media-grid" style="grid-template-columns:repeat(3,1fr)">
+            <div class="media-item"><img src="assets/img/ppm_yz_1.jpg" alt="PPM创意视觉"><div class="cap">PPM · 金色燕子 · 穿越古今创意视觉</div></div>
+            <div class="media-item"><img src="assets/img/ppm_yz_2.jpg" alt="PPM品牌标识"><div class="cap">PPM · 燕之屋品牌标识</div></div>
+            <div class="media-item"><img src="assets/img/ppm_yz_3.jpg" alt="PPM广告参考"><div class="cap">PPM · 产品 / 广告参考</div></div>
+          </div>
+        </div>
+
+        <!-- 燕之屋 脚本创意 × 影调美术 × 制作排期 -->
+        <div class="plan-block">
+          <div class="pb-head">创意编导全案共创 · 脚本创意 × 影调美术 × 制作排期<span class="meta">从创意分镜到影调设定、拍摄排期全案</span></div>
+          <div class="pg-text">
+            <ul>
+              <li><strong>60s 分镜脚本</strong>：星光汇聚成金色燕子 → 穿屏风飞向宫廷 → 掠过水面凝成燕盏 → 托盘燕窝特写，VO「时光回溯，臻品燕窝传入宫廷 / 专为皇家贵族尊享 / 稀世佳品」</li>
+              <li><strong>影调美术</strong>：TONE REFERENCES 暖金红棕国风影调 + SENCE 4 场景设计（屏风帷幔人物全景 Option C，宋式美学的克制典雅，暗红 / 古铜 / 青绿配色）</li>
+              <li><strong>制作排期甘特图</strong>：2022.06–07 全周期排期（创意沟通 → 脚本 → Pre Production → PPM/FPPM → 拍摄日 → offline → A/B copy → TC/混音 → online → 交片）</li>
+            </ul>
+          </div>
+          <div class="media-grid">
+            <div class="media-item"><img src="assets/img/yz_storyboard.png" alt="燕之屋分镜脚本" onclick="openLightbox('assets/img/yz_storyboard.png')"><div class="cap">60s 分镜脚本 · 金色燕子穿越古今</div></div>
+            <div class="media-item"><img src="assets/img/yz_toneref.png" alt="影调参考" onclick="openLightbox('assets/img/yz_toneref.png')"><div class="cap">TONE REFERENCES · 暖金红棕国风影调</div></div>
+            <div class="media-item"><img src="assets/img/yz_sence4.png" alt="场景设计" onclick="openLightbox('assets/img/yz_sence4.png')"><div class="cap">SENCE 4 · 屏风帷幔场景设计（宋式典雅）</div></div>
+            <div class="media-item"><img src="assets/img/yz_schedule.png" alt="制作排期甘特图" onclick="openLightbox('assets/img/yz_schedule.png')"><div class="cap">制作排期甘特图 · 2022.06–07 全周期</div></div>
+          </div>
+        </div>
+
+        <!-- TVC制作全流程Timeline -->
+        <div class="tl-block">
+          <div class="tl-head">TVC 制作全流程 · 统筹排期（源自《奥迪 A7L 黑武士》执行制片）<span class="meta">现场拍摄流程表 + 前期简易甘特图</span></div>
+          <div class="media-grid" style="grid-template-columns:repeat(2,1fr);padding:16px">
+            <div class="media-item"><img src="assets/img/audi_rundown.png" alt="现场拍摄流程表" onclick="openLightbox('assets/img/audi_rundown.png')"><div class="cap">现场 SHOOTING RUNDOWN · 摄制组到场 / 开机 / 分镜排期（RED 8K）</div></div>
+            <div class="media-item"><img src="assets/img/audi_gantt.png" alt="前期简易甘特图" onclick="openLightbox('assets/img/audi_gantt.png')"><div class="cap">前期简易甘特图 · 创意→分镜→堪景→PPM→预打灯→拍摄→A/B copy→online→成片</div></div>
+          </div>
+        </div>
+
+        <!-- 成片视频（图片卡片） -->
+        <div class="vid-block">
+          <h5>成片视频 · 点击封面即可观看</h5>
+          <div class="hint">年框内代表成片（上汽奥迪 / 燕之屋）；另有大众 ID 中秋、斯柯达·致敬冰雪赛场 ×3 见下方精选案例 05</div>
+          <div class="vid-cards">
+            <a class="vid-card" href="https://v.douyin.com/O6nLRkY4-mA/" target="_blank" rel="noopener">
+              <img src="assets/img/audi_frame1.jpg" alt="喜欢上海的理由">
+              <div class="vc-play"><span>▶</span></div>
+              <div class="vc-info"><div class="vc-t">《喜欢上海的理由》<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></div><div class="vc-u">肖战 · 城市情怀 TVC · 曝光 300 万+</div></div>
+            </a>
+            <a class="vid-card" href="https://weixin.qq.com/sph/AkBfezS0QU" target="_blank" rel="noopener">
+              <img src="assets/img/ppm_yz_1.jpg" alt="燕之屋品牌TVC">
+              <div class="vc-play"><span>▶</span></div>
+              <div class="vc-info"><div class="vc-t">燕之屋品牌 TVC《传承》<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></div><div class="vc-u">文案共创 + 创意编导 · 穿越古今东方滋养</div></div>
+            </a>
+            <a class="vid-card" href="https://weixin.qq.com/sph/AchPKTDDMc" target="_blank" rel="noopener">
+              <img src="assets/img/audi_frame2.jpg" alt="奥迪A7L黑武士TVC">
+              <div class="vc-play"><span>▶</span></div>
+              <div class="vc-info"><div class="vc-t">奥迪 A7L「黑武士」TVC<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></div><div class="vc-u">执行制片 / 场记</div></div>
+            </a>
+            <a class="vid-card" href="https://weixin.qq.com/sph/AW1iqVTV6B" target="_blank" rel="noopener">
+              <img src="assets/img/audi_frame3.jpg" alt="虎啸开年监制">
+              <div class="vc-play"><span>▶</span></div>
+              <div class="vc-info"><div class="vc-t">虎啸开年 · 监制<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></div><div class="vc-u">监制作品</div></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 案例3 反诈 AI营销 -->
+    <article class="case">
+      <div class="case-head">
+        <span class="case-badge">精选 03 · AI 营销</span>
+        <h3 class="case-title">港城大智能反诈联合实验室 · AI 赋能反诈传播与公益营销</h3>
+        <div class="case-meta"><span><b>角色</b> 项目小组成员 · AI 数据分析</span><span><b>时间</b> 2025.09 – 2026.08</span><span><b>标签</b> AI 赋能用户洞察 × 营销创新</span></div>
+      </div>
+      <div class="case-body">
+        <div class="four">
+          <div class="fcard">
+            <span class="ftag act">背景 · Challenge</span>
+            <ul>
+              <li><strong>联合香港警方共同策划</strong>，拟以「博主科普反诈知识」的形式，帮助即将来港的新生提前建立防骗意识、降低受骗风险，<strong>兼具实践价值与公益意义</strong></li>
+              <li>聚焦<strong>电信网络诈骗受害者特征挖掘</strong>，为反诈预警、公众教育与风险防控提供数据支撑</li>
+            </ul>
+          </div>
+          <div class="fcard">
+            <span class="ftag">动作 · Action</span>
+            <ul>
+              <li><strong>作为项目小组成员</strong>，与组员分工协作完成从数据、建模到传播落地的完整链路，本人负责<strong>数据爬取、清洗与 AI 分析建模</strong></li>
+              <li>网络爬取 <strong>2025 全年诈骗新闻 post 达十万+</strong>，清洗去噪后留存 <strong>5000+ 条有效文本用于实验</strong>，调用 <strong>LLM 大模型 API</strong> 批量提取年龄/职业/受骗场景特征</li>
+              <li>借助 <strong>KMeans</strong> 完成群体划分与画像构建，沉淀<strong>可复用的智能化分析代码</strong>交付实验室</li>
+              <li>为宣传部提供人群洞察数据，支撑<strong>反诈图表、海报与短信内容</strong>的策划与生产</li>
+            </ul>
+          </div>
+          <div class="fcard">
+            <span class="ftag out">成果 · Result</span>
+            <ul>
+              <li>输出<strong class="green">特征规律报告与可视化成果</strong>，直接支撑反诈宣传物料与风险防控落地</li>
+              <li>数据洞察 → 内容物料 → 博主传播，形成「AI 赋能营销创新」完整闭环</li>
+            </ul>
+          </div>
+          <div class="fcard">
+            <span class="ftag">呈现 · Evidence</span>
+            <ul>
+              <li>受害者画像 Dashboard、聚类可视化、肘部法则图</li>
+              <li>项目参考链接见下方（实验室官网 / 邀请函 / 获奖资讯）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="case-media">
+        <div class="media-grid">
+          <div class="media-item wide"><img src="assets/img/fraud_dashboard.png" alt="受害者画像Dashboard"><div class="cap">受害者画像分析 Dashboard</div></div>
+          <div class="media-item"><img src="assets/img/fraud_dashboard2.png" alt="分析Dashboard"><div class="cap">人群画像总览</div></div>
+          <div class="media-item"><img src="assets/img/fraud_clusters.png" alt="聚类"><div class="cap">KMeans 聚类</div></div>
+          <div class="media-item"><img src="assets/img/fraud_features.png" alt="聚类特征"><div class="cap">聚类特征对比</div></div>
+          <div class="media-item"><img src="assets/img/fraud_elbow.png" alt="肘部法则"><div class="cap">最优簇数 · 肘部法则</div></div>
+        </div>
+
+        <!-- 算法与图表解读 -->
+        <div class="plan-block">
+          <div class="pb-head">算法与图表解读 · 为什么用 KMeans？<span class="meta">数据源：2000+ 条官方新闻 + 社群发帖受害者记录</span></div>
+          <div class="pg-text">
+            <ul>
+              <li><strong>为什么用 KMeans</strong>：要回答「什么样的人容易被什么骗」，前提是先把人<strong>分群</strong>——用无监督聚类把碎片化的受害者特征标准化后自动划分为画像组，让反诈宣传能<strong>针对不同人群定制内容</strong>而非一刀切</li>
+              <li><strong>① 肘部法则</strong>：簇内误差随 K 增大而下降、速率放缓的「拐点」落在 <strong>K=3</strong>，即受害人群最佳划分为 <strong>3 组</strong></li>
+              <li><strong>② 画像结论</strong>：<strong>企业青年</strong>（电商场景盲目相信、多小额试水）／<strong>学生青年</strong>（集中于教育培训、求职类诈骗）／<strong>中年与无业</strong>（虚假投资、大额投入，风险最高）</li>
+              <li><strong>③ 预测 Demo</strong>：基于画像训练 RandomForest 分类模型，输入<strong>年龄 / 职业 / 经济状况 / 资金行为 / 决策特征 / 荣格心理</strong>，即可<strong>实时预测该人群易被哪类诈骗盯上</strong>，把分析结论变成可交互工具，服务反诈预警与科普选题（Demo.ipynb 可完整运行）</li>
+            </ul>
+          </div>
+          <div class="fraud-chart-grid">
+            <figure><img src="assets/img/fraud_elbow.jpg" alt="肘部法则"><figcaption>① 肘部法则 · 最优 K=3</figcaption></figure>
+            <figure><img src="assets/img/fraud_features.jpg" alt="特征分布"><figcaption>② 特征分布 · 三群差异</figcaption></figure>
+            <figure><img src="assets/img/fraud_dashboard.jpg" alt="画像Dashboard"><figcaption>③ 画像雷达 · 三组对比</figcaption></figure>
+          </div>
+        </div>
+
+        <!-- KMeans 核心代码（本人编写） -->
+        <div class="code-block">
+          <div class="cb-head"><span>KMeans 聚类画像.py · 受害者分群 → 画像报告（Python / sklearn）</span><span>本人编写</span></div>
+          <pre><code><span class="c"># 深度过滤：只保留高质量样本进行画像</span>
+<span class="n">df_model</span> = <span class="n">df_raw</span>[
+    (<span class="n">df_raw</span>[<span class="s">'age_group'</span>] != <span class="s">'Unknown'</span>) &amp;
+    (<span class="n">df_raw</span>[<span class="s">'occupation'</span>] != <span class="s">'Unknown'</span>) &amp;
+    (<span class="n">df_raw</span>[<span class="s">'decision_trait'</span>] != <span class="s">'Unknown'</span>) &amp;
+    (<span class="n">df_raw</span>[<span class="s">'fraud_category'</span>] != <span class="s">'Other Scam'</span>)
+].copy()
+
+<span class="c"># One-Hot 编码聚类特征</span>
+<span class="n">cluster_features</span> = [<span class="s">'age_group'</span>, <span class="s">'occupation'</span>, <span class="s">'economy'</span>,
+                        <span class="s">'fund_behavior'</span>, <span class="s">'decision_trait'</span>]
+<span class="n">df_enc</span> = <span class="n">pd</span>.<span class="n">get_dummies</span>(<span class="n">df_model</span>[<span class="n">cluster_features</span>]).astype(<span class="n">int</span>)
+
+<span class="c"># K-Means 聚类（K=3，让画像更典型）</span>
+<span class="n">K</span> = <span class="n">3</span>
+<span class="n">kmeans</span> = <span class="n">KMeans</span>(n_clusters=<span class="n">K</span>, random_state=<span class="n">42</span>, n_init=<span class="n">10</span>)
+<span class="n">df_model</span>[<span class="s">'Cluster'</span>] = <span class="n">kmeans</span>.<span class="n">fit_predict</span>(<span class="n">df_enc</span>)
+
+<span class="c"># 自动生成画像报告（每簇取最显著特征）</span>
+<span class="k">for</span> i <span class="k">in</span> <span class="n">range</span>(<span class="n">K</span>):
+    <span class="n">g</span> = <span class="n">df_model</span>[<span class="n">df_model</span>[<span class="s">'Cluster'</span>] == i]
+    top_age, top_occ = g[<span class="s">'age_group'</span>].mode()[<span class="n">0</span>], g[<span class="s">'occupation'</span>].mode()[<span class="n">0</span>]
+    top_dec  = g[<span class="s">'decision_trait'</span>].mode()[<span class="n">0</span>]
+    top_scam = g[<span class="s">'fraud_category'</span>].mode()[<span class="n">0</span>]
+    report.append(<span class="k">f</span><span class="s">"Group {i}: {top_age} {top_occ} | Weakness: {top_dec} | High Risk: {top_scam}"</span>)</code></pre>
+        </div>
+
+        <!-- 预测 Demo -->
+        <div class="plan-block">
+          <div class="pb-head">预测 Demo · 可复现<span class="meta">把 KMeans 画像结论升级为可交互预测工具</span></div>
+          <div class="pg-text">
+            <ul>
+              <li><strong>Demo 是什么</strong>：输入「年龄 / 职业 / 经济状况 / 资金行为 / 决策特征 / 荣格心理」6 个维度，RandomForest 实时输出<strong>易被哪类诈骗盯上</strong>的 Top 3 概率 + 可视化条形图</li>
+              <li><strong>实现方式</strong>：基于 KMeans 画像标签训练 RandomForest 分类器，用 Gradio 封装成交互网页（Demo.ipynb 可完整运行），把分析结论变成可交互工具，服务反诈预警与科普选题</li>
+            </ul>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px">
+            <figure style="margin:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg)">
+              <img src="assets/img/fraud_demo_1.jpg" alt="Demo参数配置" onclick="openLightbox('assets/img/fraud_demo_1.jpg')" style="width:100%;display:block;cursor:pointer">
+              <figcaption style="font-size:11.5px;color:var(--muted);padding:7px 10px;line-height:1.4">Demo 运行 · 6 维画像参数配置（手机端可访问）</figcaption>
+            </figure>
+            <figure style="margin:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg)">
+              <img src="assets/img/fraud_demo_2.jpg" alt="Demo预测结果" onclick="openLightbox('assets/img/fraud_demo_2.jpg')" style="width:100%;display:block;cursor:pointer">
+              <figcaption style="font-size:11.5px;color:var(--muted);padding:7px 10px;line-height:1.4">Demo 结果 · Top3 易感诈骗类型预警</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- 项目参考链接 -->
+        <div class="plan-block">
+          <div class="pb-head">项目链接 · 可公开访问的官方页面<span class="meta">实验室介绍 / 获奖资讯</span></div>
+          <div class="link-list">
+            <a class="ext-link" href="https://anti-scam.ccr.cityu.edu.hk/" target="_blank" rel="noopener"><span class="t">🏛 智能反诈联合实验室介绍</span><span>· 官方主页</span></a>
+            <a class="ext-link" href="https://www.cityu.edu.hk/com/Page.aspx?p=news&id=617" target="_blank" rel="noopener"><span class="t">🏆 实验室项目获奖资讯</span><span>· 香港城市大学</span></a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 案例4 App -->
+    <article class="case">
+      <div class="case-head">
+        <span class="case-badge">精选 04 · 产品</span>
+        <h3 class="case-title">TripFlow · 智能旅行助手 App（项目小组成员之一 · 未上线）</h3>
+        <div class="case-meta"><span><b>角色</b> 项目成员 · AI 辅助开发</span><span><b>时间</b> 2026.03 – 2026.04</span><span><b>标签</b> 产品思维 × AI 辅助开发</span></div>
+      </div>
+      <div class="case-body">
+        <div class="four">
+          <div class="fcard">
+            <span class="ftag act">痛点 · Problem</span>
+            <ul>
+              <li>出行最怕<strong>忘带东西</strong>：不同目的地、不同季节气候，该带的物品因人而异，而市面 App 的清单模板太通用、不贴合个人习惯</li>
+              <li><strong>商务 vs 休闲</strong>两种出行场景需求差异大（正装证件 / 随身休闲），却缺少一套可复用的场景化打包模板</li>
+              <li>缺少"属于自己的"整理方式：想沉淀自己的行李习惯，随目的地与天气<strong>智能推荐</strong>该带什么</li>
+            </ul>
+          </div>
+          <div class="fcard">
+            <span class="ftag">方案 · Solution</span>
+            <ul>
+              <li>把<strong>智能打包清单（商务/休闲双模板 + 目的地气候智能推荐）+ 行程规划 + 费用追踪（报销状态机）+ 旅行日记</strong>整合进一个 App</li>
+              <li>同时覆盖休闲与商务两大高频场景，核心功能<strong>免费无广告</strong></li>
+              <li>基于竞品分析（Gooh / 圆周旅迹 / Luggy 各自短板）与 2025 国内出游 6.52 亿人次市场数据立项</li>
+            </ul>
+          </div>
+          <div class="fcard">
+            <span class="ftag out">成果 · Result</span>
+            <ul>
+              <li>用 <strong>Kotlin + Jetpack Compose</strong> 完整实现 5 大功能模块（MVVM + UDF + Room 离线优先）</li>
+              <li>费用模块内置<strong class="green">「报销状态机」</strong>，一键切换已报销/待报销，直击商务出差痛点</li>
+              <li>打包模块<strong class="green">基于目的地智能推荐</strong>物品，动态进度追踪</li>
+            </ul>
+          </div>
+          <div class="fcard">
+            <span class="ftag">呈现 · Evidence</span>
+            <ul>
+              <li>6 大界面实机截图（首页/打包/行程/费用/日记）</li>
+              <li>操作演示视频（已给同学测试）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="case-media">
+        <div class="phone-grid">
+          <div class="phone"><img src="assets/img/app_home.png" alt="首页"><div class="pn">首页 · 行程总览</div></div>
+          <div class="phone"><img src="assets/img/app_packing.png" alt="打包"><div class="pn">打包 · 智能推荐</div></div>
+          <div class="phone"><img src="assets/img/app_itinerary.png" alt="行程"><div class="pn">行程 · 时间轴</div></div>
+          <div class="phone"><img src="assets/img/app_expenses.png" alt="费用"><div class="pn">费用 · 报销状态机</div></div>
+          <div class="phone"><img src="assets/img/app_diary.png" alt="日记"><div class="pn">日记 · 图文记录</div></div>
+        </div>
+
+        <!-- 代码展示 -->
+        <div class="code-block">
+          <div class="cb-head"><span>PackingViewModel.kt · 智能推荐与实时进度（Kotlin / Jetpack Compose）</span><span>MVVM + UDF + StateFlow</span></div>
+          <pre><code><span class="c">// 打包清单数据：Compose 状态驱动，自动监听变化刷新 UI</span>
+<span class="k">var</span> packingItems = <span class="f">mutableStateListOf</span>&lt;PackingItem&gt;()
+    <span class="k">private set</span>
+
+<span class="c">// 智能推荐物品（基于目的地气候 / 季节 / 行程类型）</span>
+packingItems.<span class="f">add</span>(<span class="f">PackingItem</span>(
+    id = <span class="n">1</span>,
+    name = <span class="s">"轻薄正装衬衫"</span>,
+    category = <span class="s">"商务"</span>,
+    isRecommended = <span class="n">true</span>,
+    recommendationReason = <span class="s">"新加坡热带气候，需透气面料"</span>,
+    tripId = <span class="n">1</span>
+))
+
+<span class="c">// 打包进度：已完成 / 总数，驱动顶部进度环</span>
+<span class="k">val</span> (checkedCount, totalCount) = viewModel.<span class="f">getProgress</span>()
+<span class="k">val</span> progressPercent =
+    <span class="k">if</span> (totalCount &gt; <span class="n">0</span>) (checkedCount * <span class="n">100</span> / totalCount) <span class="k">else</span> <span class="n">0</span></code></pre>
+        </div>
+      </div>
+    </article>
+
+    <!-- 案例5 大众ID & 斯柯达 -->
+    <article class="case">
+      <div class="case-head">
+        <span class="case-badge">精选 05 · 创意策划</span>
+        <h3 class="case-title">上汽大众 ID.家族 & 斯柯达 · 场景化创意策划</h3>
+        <div class="case-meta"><span><b>角色</b> 创意策划 · 脚本分镜</span><span><b>时间</b> 2022.04 – 2022.07</span><span><b>标签</b> 娱乐化内容创意 × 场景叙事</span></div>
+      </div>
+      <div class="case-body">
+        <div class="four">
+          <div class="fcard">
+            <span class="ftag act">背景 · Challenge</span>
+            <ul>
+              <li>为<strong>上汽大众 ID.家族车机系统</strong>与<strong>斯柯达品牌</strong>策划系列短视频，解决功能点生硬、难传播的问题</li>
+              <li>把「车机 APP 联动 / 远程控车 / 世界杯直播」等功能点，做成<strong>有剧情、有情绪、可传播</strong>的娱乐化内容</li>
+            </ul>
+          </div>
+          <div class="fcard">
+            <span class="ftag">动作 · Action</span>
+            <ul>
+              <li><strong>大众 ID 系列</strong>：产出多版 video option 创意（车机×网易云 / 咪咕 / 小组件），每个功能点对应一个生活化剧情</li>
+              <li><strong>斯柯达</strong>：策划「致敬冰雪赛场」系列短视频，绑定 2022 冬奥节点与赛场情感场景</li>
+              <li>从创意概念、分镜脚本到拍摄执行全流程输出</li>
+            </ul>
+          </div>
+          <div class="fcard">
+            <span class="ftag out">成果 · Result</span>
+            <ul>
+              <li>多支创意方案落地成片，并在<strong class="green">官方视频号发布</strong>（见下方成片链接）</li>
+              <li>把生硬的汽车功能点转化为<strong class="green">有记忆点的剧情化内容</strong>，提升传播力与品牌好感度</li>
+            </ul>
+          </div>
+          <div class="fcard">
+            <span class="ftag">呈现 · Evidence</span>
+            <ul>
+              <li>斯柯达「致敬冰雪赛场」系列成片 ×3（视频号已上线）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="case-media">
+        <!-- 斯柯达 致敬冰雪赛场系列 -->
+        <div class="plan-block">
+          <div class="pb-head">斯柯达 · 致敬冰雪赛场系列<span class="meta">2022 冬奥节点 · 3 支成片已上线视频号</span></div>
+          <div class="pg-text">
+            <ul>
+              <li><strong>致敬冰雪赛场系列</strong>：2022 年 2 月冬奥节点上线，以「心怀梦想 · 为赛场喝彩」为主题，系列 3 支成片（梦在发芽 / 心中有梦 / 不忘初心），把品牌精神与冬奥赛场情感绑定</li>
+              <li>从创意概念、脚本分镜到拍摄执行全流程输出，成片已在官方视频号发布</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 视频链接 -->
+        <div class="vid-block">
+          <h5>成片视频 · 微信视频号</h5>
+          <div class="hint">斯柯达致敬冰雪赛场系列 3 支 + 大众 ID 中秋成片</div>
+          <div class="vid-links">
+            <a class="vlink" href="https://weixin.qq.com/sph/ARxjVjQrOp" target="_blank" rel="noopener"><span class="pl">▶</span><span><span class="vt">大众 ID · 中秋成片<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></span><span class="vu">ID 家族车机系列</span></span></a>
+            <a class="vlink" href="https://weixin.qq.com/sph/ABcqBIYev9" target="_blank" rel="noopener"><span class="pl">▶</span><span><span class="vt">斯柯达 · 致敬冰雪赛场 ①<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></span><span class="vu">「梦在发芽，长成巨树」</span></span></a>
+            <a class="vlink" href="https://weixin.qq.com/sph/AM0glQkbOP" target="_blank" rel="noopener"><span class="pl">▶</span><span><span class="vt">斯柯达 · 致敬冰雪赛场 ②<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></span><span class="vu">「心中有梦，哪里都是赛场」</span></span></a>
+            <a class="vlink" href="https://weixin.qq.com/sph/Au1xDdpb6m" target="_blank" rel="noopener"><span class="pl">▶</span><span><span class="vt">斯柯达 · 致敬冰雪赛场 ③<span class="tag" style="background:#dcfce7;color:#15803d">已上线</span></span><span class="vu">「不忘初心，心怀梦想」</span></span></a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="sec-action">
+      <a class="btn btn-primary" href="#more">查看其他项目 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 更多项目 ===== -->
+<section id="more">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker">More Projects</div>
+      <h2 class="sec-title">更多项目</h2>
+      <p class="sec-sub">从私域社群到数据爬虫，再到影视创作，同一套「内容 × 数据 × 统筹」方法论在不同场景的迁移。</p>
+    </div>
+    <div class="more-grid">
+      <div class="more-card">
+        <h4>上海迪伦律师事务所 · 私域社群与内容矩阵</h4>
+        <div class="role">新媒体运营 · 2022.08 – 2024.11</div>
+        <p>线下普法引流线上沉淀：设计「法律工具包/避坑指南 PDF」进群钩子，搭建 15 个法律咨询社群；首创《迪伦动态》《迪伦视野》两大品牌栏目，公众号日更建立信任资产。<b>其中年创收 150 万+ 主要来自主导跟进、谈判促成的 1 家大客户常年法律顾问案</b>——从内容获客、线索跟进到商务成交的完整销售闭环。</p>
+        <div class="nums"><span>进群留存 45-60%</span><span>月均线索 20-30 条</span><span>大客户常年顾问案 · 创收主力</span><span>全渠道月曝光 +180%</span></div>
+      </div>
+      <div class="more-card">
+        <h4>携程数据爬虫 · 「免费景点流量密码」研究</h4>
+        <div class="role">数据分析 · 硕士课程项目（COM5507）</div>
+        <p>两阶段爬虫研究：先用 CSS 选择器爬取携程 300 页共 2990 个景点数据，过滤出 79 个评分 4.8–5.0 的免费景点；再用 Selenium 浏览器自动化爬取其用户评论，完成清洗、情感分析、词云与可视化，输出完整英文研究报告。</p>
+        <div class="code-block">
+          <div class="cb-head"><span>景点爬虫 · requests + BeautifulSoup（重试 + 随机延时）</span><span>Python</span></div>
+          <pre><code><span class="c"># 携程景点爬虫：分页抓取 + 精准 CSS 选择器解析</span>
+<span class="k">def</span> <span class="f">fetch_page</span>(session, url, page_no, retry_count=<span class="n">3</span>):
+    <span class="k">for</span> attempt <span class="k">in</span> <span class="f">range</span>(retry_count):
+        <span class="k">try</span>:
+            <span class="f">time.sleep</span>(<span class="f">random.uniform</span>(<span class="n">2</span>, <span class="n">5</span>))  <span class="c"># 随机延时防封</span>
+            response = session.<span class="f">get</span>(url, timeout=<span class="n">30</span>)
+            ...
+            <span class="k">return</span> html
+        <span class="k">except</span> Exception:
+            ...
+
+soup = <span class="f">BeautifulSoup</span>(html, <span class="s">"html.parser"</span>)
+<span class="c"># 精准 CSS 选择器提取景点名称 / 评分 / 评论数 / 价格</span>
+sight_cards = soup.<span class="f">find_all</span>(<span class="s">'div'</span>, <span class="f">class_</span>=<span class="f">re.compile</span>(<span class="s">r'sightItemCard_box__'</span>))</code></pre>
+        </div>
+
+        <!-- 英文研究报告 + 可视化结论 -->
+        <div class="plan-block">
+          <div class="pb-head">完整英文研究报告 · Cracking the "Traffic Code" of Free Attractions<span class="meta">COM5507 Report Group 17 · 两阶段爬虫研究</span></div>
+          <div class="pg-text">
+            <ul>
+              <li><strong>研究问题</strong>：免费景点「流量密码」的核心驱动因素——评分、评论数、地理分布、景点类型、服务质量如何影响免费景点的热度与口碑</li>
+              <li><strong>方法论</strong>：Stage 1 浏览器模拟 + CSS 选择器爬取 300 页（3000 景点）→ 过滤 654 个免费景点 → 锁定 79 个 4.8–5.0 高分对象；Stage 2 Selenium + XPath + 页面滚动爬取评论，Pandas + 正则清洗，Jieba 分词 + 自定义词典 + 情感词典算法量化</li>
+              <li><strong>数据结论</strong>：高分免费景点集中在<strong>博物馆等文化教育场所</strong>；正面评价围绕「值得 / 讲解 / 历史 / 专业」——免费景点的核心竞争不在门票经济，而在<strong>文化体验深度与知识传播专业性</strong></li>
+            </ul>
+          </div>
+          <div class="pg-imgs" style="grid-template-columns:repeat(3,1fr)">
+            <figure style="margin:0"><img src="assets/img/ctrip_top15.jpg" alt="评论数量TOP15景点条形图"><figcaption class="cap">评论数量 TOP15（前15占比 79.1%）</figcaption></figure>
+            <figure style="margin:0"><img src="assets/img/ctrip_wordcloud.jpg" alt="高频词词云"><figcaption class="cap">高频词词云 · 讲解/历史/专业</figcaption></figure>
+            <figure style="margin:0"><img src="assets/img/ctrip_pos.jpg" alt="正面评价词云"><figcaption class="cap">正面评价 · 值得/性价比</figcaption></figure>
+          </div>
+          <div class="src-link">📄 完整报告：5507 Report Group 17（英文 28,000+ 字）· 评论情感 SnowNLP 分析 83.1% 正面评价</div>
+        </div>
+        <div class="nums"><span>2990 景点</span><span>79 个 4.8+ 免费景点</span><span>Selenium 评论爬取</span><span>情感分析 / 词云</span><span>英文研究报告</span></div>
+      </div>
+      <div class="more-card">
+        <h4>Keeta 广告策划 · 品牌传播方案</h4>
+        <div class="role">广告策划 · 硕士课程项目（COM5401）</div>
+        <p>围绕香港「时间贫困」洞察（打工仔中位工时 42.2 小时、77% 认为掌控时间即幸福），以「时间唔够用？keeta 帮你！」为核心主张，完成消费者洞察、传播策略、创意概念与 storyboard 全案。</p>
+        <div class="nums"><span>全案策划</span><span>消费者洞察</span><span>storyboard</span><span>Print Ad / 整合传播</span></div>
+        <div class="more-media">
+          <img src="assets/img/keeta_cover.jpg" alt="Keeta方案封面">
+          <img src="assets/img/keeta_insight.jpg" alt="消费者洞察">
+          <img src="assets/img/keeta_printad.jpg" alt="Print Ad平面广告">
+        </div>
+      </div>
+      <div class="more-card">
+        <h4>本科影视编导与美术作品</h4>
+        <div class="role">影视创作 · 上海大学 / 温哥华电影学院 2017-2021</div>
+        <p>导演 / 制片 / 剪辑 / 美术 / 摄影指导多岗实践，完成十余部学生短片与商业 TVC 项目，具备完整影视制作与视觉审美能力。</p>
+        <div class="award-list">
+          <div class="award"><span class="t">🏆 FIRST 青年影展</span><span>参与执行美术短片《沉为奥菲莉亚》入围 2022 FIRST 青年影展主竞赛单元</span></div>
+          <div class="award"><span class="t">🎬 上海国际电影节</span><span>48H 限时创作《埃奎林》担任制片人，完成全流程制片统筹</span></div>
+        </div>
+        <div class="nums"><span>十余部短片</span><span>美术方案</span><span>执行导演</span><span>制片统筹</span></div>
+        <div class="more-media">
+          <img src="assets/img/film_oph1.jpg" alt="沉为奥菲莉亚">
+          <img src="assets/img/film_yz1.jpg" alt="一直向前">
+          <img src="assets/img/film_cong1.jpg" alt="从">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 关于我 ===== -->
+<section id="about">
+  <div class="wrap">
+    <div>
+      <div class="sec-kicker">About Me</div>
+      <h2 class="sec-title">关于我</h2>
+      <p class="sec-sub">跨行业内容增长复合背景：从品牌广告到律所社群、字库账号运营操盘，将创意策划、社群运营与流量转化能力跨行业迁移。</p>
+      <ul class="about-list">
+        <li><strong>内容驱动增长主线</strong>：深谙榜单洞察、差异化选品、视觉包装与节点运营，熟悉数据复盘与大促活动，提升投产转化与 GMV 增长</li>
+        <li><strong>数据分析 × 内容创意复合</strong>：数据分析硕士，掌握爬虫与用户聚类建模，兼备短视频内容策划与私域社群运营</li>
+        <li><strong>AI 全链路提效</strong>：熟练运用 AI 工具完成视觉物料设计、多维度数据分析；掌握 Python 调用大模型 API、辅助编程开发</li>
+      </ul>
+    </div>
+    <div>
+      <div class="sec-kicker">Education</div>
+      <h2 class="sec-title" style="font-size:24px">教育经历</h2>
+      <div class="edu-item"><div class="y">2025.09 – 2026.10</div><div><h5>香港城市大学 · 新媒体传播 硕士</h5><p>数据驱动传播、用户洞察、智能反诈实验室项目</p></div></div>
+      <div class="edu-item"><div class="y">2020.09 – 2021.09</div><div><h5>上海温哥华电影学院 · 电影制作（辅修）</h5><p>系统掌握编导与制作流程，参与短片创作</p></div></div>
+      <div class="edu-item"><div class="y">2017.09 – 2021.07</div><div><h5>上海大学 · 艺术与科技 本科</h5><p>影视编导、美术设计、视觉表达</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 联系 ===== -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h3>期待与你聊聊</h3>
+        <p>如果你在寻找一位既能写爆款内容、又能搭私域社群、还懂数据与 AI 的运营/市场伙伴，欢迎联系我。</p>
+        <div class="contact-rows">
+          <div class="crow"><span class="ic">✉</span><a href="mailto:yangkee99@163.com">yangkee99@163.com</a></div>
+          <div class="crow"><span class="ic">◎</span><span>上海 · 可全国到岗</span></div>
+        </div>
+      </div>
+      <div>
+        <h3>扫码查看作品集</h3>
+        <div class="qr-place">[ 二维码占位 · 部署上线后生成 ]<br>扫一扫即可随时浏览</div>
+      </div>
+    </div>
+    <div class="copyright">© 2026 杨轲 · 内容驱动增长 · 运营 × 市场 · 作品集</div>
+  </div>
+</footer>
+
+<!-- Lightbox 全图预览 -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <div class="lb-inner"><img id="lightbox-img" alt="全图预览"></div>
+  <span class="lb-close" title="关闭">✕</span>
+</div>
+
+<script>
+function openLightbox(src){
+  var lb=document.getElementById('lightbox');
+  document.getElementById('lightbox-img').src=src;
+  lb.style.display='block';
+  document.body.style.overflow='hidden';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').style.display='none';
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox();});
+</script>
+
+</body>
+</html>
